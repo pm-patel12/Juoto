@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { headers, footers } from "../components/registry";
 import { useStoreConfig } from "../StoreConfigContext";
+import "../assets/css/style.scss";
 
 const StoreLayout = () => {
   // Store Layout configuration

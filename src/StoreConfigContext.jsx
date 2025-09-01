@@ -1,11 +1,13 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext } from "react";
-import brandLogoDark from "./assets/images/brand-logo-dark.svg";
-import brandLogoLight from "./assets/images/brand-logo-light.svg";
+import { generateColorShades } from "./utils/generateShades";
+import brandLogoDark from "../src/assets/images/brand-logo-dark.svg";
+import brandLogoLight from "../src/assets/images/brand-logo-light.svg";
 
 const StoreConfigContext = createContext();
-const staticConfig = {
-  headerType: "header1",
+
+const apiConfig = {
+  headerType: "header2",
   footerType: "footer1",
   productCardType: "list4x5",
   heroSliderType: "heroSliderBoxed",
@@ -18,13 +20,23 @@ const staticConfig = {
     address: "121 Town Crest Road #123 Fort Saskatchewan AB. T8L0G7",
   },
   theme: {
-    primaryColor: "#FF5733",
-    secondaryColor: "#33C1FF",
+    primaryColor: "#FF2056",
+    secondaryColor: "#171717",
   },
   socialLinks: {
     facebook: "https://facebook.com/juoto",
     twitter: "https://twitter.com/juoto",
     instagram: "https://instagram.com/juoto",
+  },
+};
+
+// enrich theme with shades
+const staticConfig = {
+  ...apiConfig,
+  theme: {
+    ...apiConfig.theme,
+    primaryShades: generateColorShades(apiConfig.theme.primaryColor),
+    secondaryShades: generateColorShades(apiConfig.theme.secondaryColor),
   },
 };
 

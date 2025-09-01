@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import StoreLayout from "./layout/StoreLayout";
 import { StoreConfigProvider } from "./StoreConfigContext";
+import ThemeVariables from "./utils/ThemeVariables";
 
 const App = () => {
   return (
     <>
-      {/* Store Front Routs Starts */}
+      {/* Store Front Routes Starts */}
       <StoreConfigProvider>
+        <ThemeVariables />
         <Router>
           <Routes>
             <Route path="" element={<StoreLayout />}>
@@ -17,7 +19,7 @@ const App = () => {
           </Routes>
         </Router>
       </StoreConfigProvider>
-      {/* Store Front Routs Ends */}
+      {/* Store Front Routes Ends */}
     </>
   );
 };

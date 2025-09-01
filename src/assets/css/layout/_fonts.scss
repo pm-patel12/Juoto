@@ -1,119 +1,93 @@
 @font-face {
-  font-family: "Poppins";
-  src: url("../../fonts/Poppins-Regular.eot");
-  src: url("../../fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../../fonts/Poppins-Regular.woff2") format("woff2"),
-    url("../../fonts/Poppins-Regular.woff") format("woff"),
-    url("../../fonts/Poppins-Regular.ttf") format("truetype"),
-    url("../../fonts/Poppins-Regular.svg#Poppins-Regular") format("svg");
-  font-weight: normal;
+  font-family: "Mona Sans";
+  src: url("../../fonts/MonaSans-Light.eot");
+  src: url("../../fonts/MonaSans-Light.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/MonaSans-Light.woff2") format("woff2"),
+    url("../../fonts/MonaSans-Light.woff") format("woff"),
+    url("../../fonts/MonaSans-Light.ttf") format("truetype"),
+    url("../../fonts/MonaSans-Light.svg#MonaSans-Light") format("svg");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("../../fonts/Poppins-SemiBold.eot");
-  src: url("../../fonts/Poppins-SemiBold.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../fonts/Poppins-SemiBold.woff2") format("woff2"),
-    url("../../fonts/Poppins-SemiBold.woff") format("woff"),
-    url("../../fonts/Poppins-SemiBold.ttf") format("truetype"),
-    url("../../fonts/Poppins-SemiBold.svg#Poppins-SemiBold") format("svg");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../../fonts/Poppins-Black.eot");
-  src: url("../../fonts/Poppins-Black.eot?#iefix") format("embedded-opentype"),
-    url("../../fonts/Poppins-Black.woff2") format("woff2"),
-    url("../../fonts/Poppins-Black.woff") format("woff"),
-    url("../../fonts/Poppins-Black.ttf") format("truetype"),
-    url("../../fonts/Poppins-Black.svg#Poppins-Black") format("svg");
+  font-family: "Mona Sans";
+  src: url("../../fonts/MonaSans-Black.eot");
+  src: url("../../fonts/MonaSans-Black.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/MonaSans-Black.woff2") format("woff2"),
+    url("../../fonts/MonaSans-Black.woff") format("woff"),
+    url("../../fonts/MonaSans-Black.ttf") format("truetype"),
+    url("../../fonts/MonaSans-Black.svg#MonaSans-Black") format("svg");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("../../fonts/Poppins-Medium.eot");
-  src: url("../../fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"),
-    url("../../fonts/Poppins-Medium.woff2") format("woff2"),
-    url("../../fonts/Poppins-Medium.woff") format("woff"),
-    url("../../fonts/Poppins-Medium.ttf") format("truetype"),
-    url("../../fonts/Poppins-Medium.svg#Poppins-Medium") format("svg");
+  font-family: "Mona Sans";
+  src: url("../../fonts/MonaSans-ExtraBold.eot");
+  src: url("../../fonts/MonaSans-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/MonaSans-ExtraBold.woff2") format("woff2"),
+    url("../../fonts/MonaSans-ExtraBold.woff") format("woff"),
+    url("../../fonts/MonaSans-ExtraBold.ttf") format("truetype"),
+    url("../../fonts/MonaSans-ExtraBold.svg#MonaSans-ExtraBold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("../../fonts/MonaSans-Medium.eot");
+  src: url("../../fonts/MonaSans-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/MonaSans-Medium.woff2") format("woff2"),
+    url("../../fonts/MonaSans-Medium.woff") format("woff"),
+    url("../../fonts/MonaSans-Medium.ttf") format("truetype"),
+    url("../../fonts/MonaSans-Medium.svg#MonaSans-Medium") format("svg");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("../../fonts/Poppins-Thin.eot");
-  src: url("../../fonts/Poppins-Thin.eot?#iefix") format("embedded-opentype"),
-    url("../../fonts/Poppins-Thin.woff2") format("woff2"),
-    url("../../fonts/Poppins-Thin.woff") format("woff"),
-    url("../../fonts/Poppins-Thin.ttf") format("truetype"),
-    url("../../fonts/Poppins-Thin.svg#Poppins-Thin") format("svg");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../../fonts/Poppins-ExtraBold.eot");
-  src: url("../../fonts/Poppins-ExtraBold.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../fonts/Poppins-ExtraBold.woff2") format("woff2"),
-    url("../../fonts/Poppins-ExtraBold.woff") format("woff"),
-    url("../../fonts/Poppins-ExtraBold.ttf") format("truetype"),
-    url("../../fonts/Poppins-ExtraBold.svg#Poppins-ExtraBold") format("svg");
+  font-family: "Mona Sans";
+  src: url("../../fonts/MonaSans-Bold.eot");
+  src: url("../../fonts/MonaSans-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/MonaSans-Bold.woff2") format("woff2"),
+    url("../../fonts/MonaSans-Bold.woff") format("woff"),
+    url("../../fonts/MonaSans-Bold.ttf") format("truetype"),
+    url("../../fonts/MonaSans-Bold.svg#MonaSans-Bold") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("../../fonts/Poppins-Bold.eot");
-  src: url("../../fonts/Poppins-Bold.eot?#iefix") format("embedded-opentype"),
-    url("../../fonts/Poppins-Bold.woff2") format("woff2"),
-    url("../../fonts/Poppins-Bold.woff") format("woff"),
-    url("../../fonts/Poppins-Bold.ttf") format("truetype"),
-    url("../../fonts/Poppins-Bold.svg#Poppins-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../../fonts/Poppins-ExtraLight.eot");
-  src: url("../../fonts/Poppins-ExtraLight.eot?#iefix")
+  font-family: "Mona Sans";
+  src: url("../../fonts/MonaSans-Regular.eot");
+  src: url("../../fonts/MonaSans-Regular.eot?#iefix")
       format("embedded-opentype"),
-    url("../../fonts/Poppins-ExtraLight.woff2") format("woff2"),
-    url("../../fonts/Poppins-ExtraLight.woff") format("woff"),
-    url("../../fonts/Poppins-ExtraLight.ttf") format("truetype"),
-    url("../../fonts/Poppins-ExtraLight.svg#Poppins-ExtraLight") format("svg");
-  font-weight: 200;
+    url("../../fonts/MonaSans-Regular.woff2") format("woff2"),
+    url("../../fonts/MonaSans-Regular.woff") format("woff"),
+    url("../../fonts/MonaSans-Regular.ttf") format("truetype"),
+    url("../../fonts/MonaSans-Regular.svg#MonaSans-Regular") format("svg");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("../../fonts/Poppins-Light.eot");
-  src: url("../../fonts/Poppins-Light.eot?#iefix") format("embedded-opentype"),
-    url("../../fonts/Poppins-Light.woff2") format("woff2"),
-    url("../../fonts/Poppins-Light.woff") format("woff"),
-    url("../../fonts/Poppins-Light.ttf") format("truetype"),
-    url("../../fonts/Poppins-Light.svg#Poppins-Light") format("svg");
-  font-weight: 300;
+  font-family: "Mona Sans";
+  src: url("../../fonts/MonaSans-SemiBold.eot");
+  src: url("../../fonts/MonaSans-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/MonaSans-SemiBold.woff2") format("woff2"),
+    url("../../fonts/MonaSans-SemiBold.woff") format("woff"),
+    url("../../fonts/MonaSans-SemiBold.ttf") format("truetype"),
+    url("../../fonts/MonaSans-SemiBold.svg#MonaSans-SemiBold") format("svg");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
