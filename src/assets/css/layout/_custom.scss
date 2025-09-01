@@ -1,1 +1,60 @@
 @use "./variables" as var;
+
+
+// ========================
+// Hero Section
+// ========================
+.heroSlider {
+    .swiper-slide {
+        height: 400px;
+        width: 100%;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, #000000ab, transparent);
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        z-index: 10;
+        height: 30px;
+        width: 30px;
+        min-height: 30px;
+        min-width: 30px;
+        border-radius: 50%;
+        background-color: var(--white);
+        left: 10%;
+        box-shadow: 0px 21px 6px 0px rgba(0, 0, 0, 0%), 0px 13px 5px 0px rgba(0, 0, 0, 1%), 0px 7px 4px 0px rgba(0, 0, 0, 5%), 0px 3px 3px 0px rgba(0, 0, 0, 9%), 0px 1px 2px 0px rgba(0, 0, 0, 10%);
+
+        &::after {
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.33301 11.6667L5.99967 8.33333L9.33301 5' stroke='%23404040' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            display: block;
+            height: 16px;
+            width: 16px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .swiper-button-next {
+        rotate: 180deg;
+        right: 10%;
+        left: unset;
+    }
+}
