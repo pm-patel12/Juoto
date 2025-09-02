@@ -1,0 +1,90 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import { useStoreConfig } from "../../StoreConfigContext";
+import HeroSlider from "./HeroSlider";
+import { TbPhoneCall } from "react-icons/tb";
+import { TbClock } from "react-icons/tb";
+import { TbMapPin } from "react-icons/tb";
+import DiscountCouponCard from "./DiscountCouponCard";
+import { TbShare3 } from "react-icons/tb";
+import { discountCouponData } from "../../staticData";
+
+const HeroSection = () => {
+  // Store configuration
+  const storeConfig = useStoreConfig();
+  const brandInfo = storeConfig.brandInfo;
+
+  //   Share Page Handler
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: "Check this out!",
+          text: "I found something cool for you 👀",
+          url: window.location.href,
+        });
+      } catch (err) {
+        console.error("Share failed:", err);
+      }
+    } else {
+      alert("Sharing is not supported in this browser.");
+    }
+  };
+
+  return (
+    <section className="hero-sec">
+      <HeroSlider type={storeConfig.heroSliderType} />
+      <div className="container">
+        <div className="hero-content">
+          <div className="d-flex align-items-start justify-content-between gap-3 flex-md-nowrap flex-wrap">
+            <div>
+              <h1 className="mb-1">{brandInfo.name}</h1>
+              <p className="tag-line mb-4">{brandInfo.tagLine}</p>
+              <ul className="store-meta">
+                <li>
+                  <TbPhoneCall /> {brandInfo.number}
+                </li>
+                <li>
+                  <TbClock />
+                  Open | 11:00 AM – 11:00 PM
+                </li>
+                <li>
+                  <TbMapPin /> {brandInfo.address}
+                </li>
+              </ul>
+            </div>
+            <div>
+              {discountCouponData.length > 0 && (
+                <div className="discount-coupon-wrap mb-2">
+                  <Swiper
+                    modules={[Pagination]}
+                    slidesPerView={1}
+                    pagination={{ clickable: true }}
+                    loop={true}
+                    className="discount-coupon-slider"
+                  >
+                    {discountCouponData.map((coupon, index) => (
+                      <SwiperSlide key={index}>
+                        <DiscountCouponCard data={coupon} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+              )}
+              <div className="w-100 d-flex justify-content-end pe-md-3">
+                <button className="ctm-btn white-btn" onClick={handleShare}>
+                  <TbShare3 />
+                  Share
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;

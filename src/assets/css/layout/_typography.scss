@@ -77,66 +77,77 @@ body {
 h1 {
   font-size: var(--h1-size);
   line-height: var(--h1-lh);
+  font-weight: 700;
 }
 
 .h2,
 h2 {
   font-size: var(--h2-size);
   line-height: var(--h2-lh);
+  font-weight: 600;
 }
 
 .h3,
 h3 {
   font-size: var(--h3-size);
   line-height: var(--h3-lh);
+  font-weight: 600;
 }
 
 .h4,
 h4 {
   font-size: var(--h4-size);
   line-height: var(--h4-lh);
+  font-weight: 600;
 }
 
 .h5,
 h5 {
   font-size: var(--h5-size);
   line-height: var(--h5-lh);
+  font-weight: 600;
 }
 
 .h6,
 h6 {
   font-size: var(--h6-size);
   line-height: var(--h6-lh);
+  font-weight: 500;
 }
 
 .p,
 p {
   font-size: var(--p-size);
   line-height: var(--p-lh);
+  font-weight: 500;
 }
 
 .li,
 li {
   font-size: var(--p-size);
   line-height: var(--p-lh);
+  font-weight: 500;
 }
 
 .span,
 span {
   font-size: var(--p-size);
   line-height: var(--p-lh);
+  font-weight: 500;
 }
 
 .a,
 a {
   font-size: var(--p-size);
   line-height: var(--p-lh);
+  font-weight: 500;
 }
 
 .small,
 small {
   font-size: var(--small-size);
   line-height: var(--small-lh);
+  font-weight: 500;
 }
 
 // ==========================

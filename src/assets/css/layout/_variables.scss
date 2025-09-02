@@ -2,7 +2,7 @@
 // Theme variables & Light Theme Color
 // ================================
 :root {
-  --body-color: #f6f6f6;
+  --body-color: #fff;
 
   /* Fonts settings */
   --body-font-family: "Mona Sans", sans-serif;
@@ -70,7 +70,8 @@
 // Dark Theme Color
 // ================================
 [data-theme="dark"] {
-  --body-color: #101010;
+  --body-color: #0f172b;
+  --white: #1d293d;
 
   /* Text Colors */
   --text-50: #f8fafc;
@@ -78,8 +79,8 @@
   --text-200: #e2e8f0;
   --text-300: #cad5e2;
   --text-400: #90a1b9;
-  --text-500: #62748e;
-  --text-600: #45556c;
+  --text-500: #90a1b9;
+  --text-600: #90a1b9;
   --text-700: #cad5e2;
   --text-800: #e2e8f0;
   --text-900: #f1f5f9;

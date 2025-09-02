@@ -1,5 +1,3 @@
-import HeroSliderBoxed from "./heroSection/HeroSliderBoxed";
-import HeroSliderFull from "./heroSection/HeroSliderFull";
 import Grid2x2 from "./productCard/Grid2x2";
 import Grid4x5 from "./productCard/Grid4x5";
 import List2x2 from "./productCard/List2x2";
@@ -25,10 +23,4 @@ export const productCard = {
       grid4x5: Grid4x5,
       list2x2: List2x2,
       list4x5: List4x5,
-};
-
-// Store Hero Section's Sliders Variants Registry 
-export const heroSlider = {
-      heroSliderFull: HeroSliderFull,
-      heroSliderBoxed: HeroSliderBoxed,
 };

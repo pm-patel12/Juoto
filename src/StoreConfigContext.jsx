@@ -7,17 +7,19 @@ import brandLogoLight from "../src/assets/images/brand-logo-light.svg";
 const StoreConfigContext = createContext();
 
 const apiConfig = {
-  headerType: "header2",
+  headerType: "header1",
   footerType: "footer1",
   productCardType: "list4x5",
-  heroSliderType: "heroSliderBoxed",
+  heroSliderType: "boxed",
   brandInfo: {
-    name: "Juoto",
+    name: "The Spice Garden – Healthy by EatFit",
     logoLight: brandLogoLight,
     logoDark: brandLogoDark,
     tagLine: "Where Every Bite Tells a Story",
     number: "+931 587 28 538 55",
     address: "121 Town Crest Road #123 Fort Saskatchewan AB. T8L0G7",
+    currency: "USD",
+    currencySymnol: "$",
   },
   theme: {
     primaryColor: "#FF2056",
