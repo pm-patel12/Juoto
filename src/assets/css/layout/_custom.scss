@@ -6,19 +6,23 @@
 .heroSliderWrapper {
   position: relative;
   margin-bottom: 20px;
+
   & * {
     transition: all linear 1s;
   }
+
   &.boxed {
     max-width: 1240px;
     padding-top: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+
     .swiper {
       border-radius: 10px;
     }
   }
+
   .swiper-slide {
     height: 400px;
     width: 100%;
@@ -42,6 +46,7 @@
       object-position: center;
     }
   }
+
   .nav-btn-wrap {
     position: absolute;
     top: 50%;
@@ -55,6 +60,7 @@
     justify-content: space-between;
     margin: 0 auto;
   }
+
   .custom-prev,
   .custom-next {
     height: 30px;
@@ -80,14 +86,17 @@
       background-repeat: no-repeat;
       background-position: center;
     }
+
     &:disabled {
       background-color: var(--slate-200);
       opacity: 0.7;
     }
+
     &:hover {
       background-color: var(--slate-300);
     }
   }
+
   .custom-next {
     rotate: 180deg;
   }
@@ -97,11 +106,10 @@
 // Hero Section Content
 // ========================
 .hero-sec {
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--color-primary-300), transparent 90%) 0%,
-    rgba(255, 255, 255, 0%) 100%
-  );
+  background: linear-gradient(180deg,
+      color-mix(in srgb, var(--color-primary-300), transparent 90%) 0%,
+      rgba(255, 255, 255, 0%) 100%);
+
   .hero-content {
     .tag-line {
       color: var(--text-700);
@@ -109,6 +117,7 @@
       padding-left: 10px;
       border-left: 2px solid var(--slate-300);
     }
+
     .store-meta {
       list-style: none;
       padding: 0;
@@ -118,6 +127,7 @@
       justify-content: flex-start;
       flex-flow: column;
       gap: 12px;
+
       li {
         display: flex;
         align-items: center;
@@ -125,6 +135,7 @@
         gap: 10px;
         margin: 0;
         color: var(--text-700);
+
         svg {
           stroke: var(--color-primary-500);
           height: 18px;
@@ -142,8 +153,10 @@
 // ========================
 .discount-coupon-wrap {
   max-width: 315px;
+
   .swiper-pagination {
     position: unset;
+
     .swiper-pagination-bullet {
       height: 6px;
       width: 6px;
@@ -151,6 +164,7 @@
       min-width: 6px;
       background-color: var(--slate-400);
       border: 2px solid transparent;
+
       &.swiper-pagination-bullet-active {
         background-color: var(--slate-500);
         border: 2px solid var(--slate-500);
@@ -158,17 +172,20 @@
     }
   }
 }
+
 .discount-coupon-card {
   padding: 12px 20px;
   border: 1px solid var(--color-primary-200);
   border-radius: 20px;
   background-color: var(--white);
   max-width: 300px;
+
   small {
     font-size: 12px;
     line-height: 17px;
     color: var(--text-500);
   }
+
   svg {
     fill: var(--color-primary-500);
     height: 30px;
@@ -176,11 +193,13 @@
     min-height: 30px;
     min-width: 30px;
   }
+
   .divider {
     width: 100%;
     border-top: 1px dashed var(--color-primary-200);
     margin: 10px 0 14px 0;
     position: relative;
+
     &::after,
     &::before {
       content: "";
@@ -199,12 +218,14 @@
       //   transform: translateY(-50%);
       background-color: var(--body-color);
     }
+
     &::after {
       left: unset;
       right: -28px;
       rotate: 225deg;
     }
   }
+
   .offer-meta {
     display: flex;
     align-items: center;
@@ -215,6 +236,7 @@
     padding: 6px 10px;
     border: 1px solid var(--slate-300);
     border-radius: 50px;
+
     li {
       margin: 0;
       font-size: 12px;
@@ -223,6 +245,7 @@
       align-items: center;
       gap: 8px;
       color: var(--text-600);
+
       &::after {
         content: "";
         display: block;
@@ -235,12 +258,106 @@
         outline: 1px solid var(--slate-400);
         border: 1px solid var(--white);
       }
+
       &:last-child {
         margin: 0;
         padding: 0;
+
         &::after {
           display: none;
         }
+      }
+    }
+  }
+}
+
+// ========================
+// Linear CTA
+// ========================
+.linear-cta-wrap {
+  padding: 16px 12px;
+  border-radius: 8px;
+  background-color: var(--color-primary-700);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  padding-right: 50px;
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+  }
+
+  .ctm-btn {
+    border: 1px solid var(--color-primary-400);
+  }
+
+  .close-btn {
+    position: absolute;
+    right: 12px;
+    top: 19px;
+    background-color: transparent;
+    padding: 6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+
+    &:hover {
+      background-color: var(--color-primary-600);
+
+      svg {
+        rotate: 90deg;
+      }
+    }
+  }
+
+  &.fade-in {
+    opacity: 1;
+  }
+
+  &.fade-out {
+    opacity: 0;
+  }
+}
+
+// =========================
+// Product categories
+// =========================
+.product-cat-wrap {
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+
+    li {
+      margin: 0;
+
+      input[type="radio"] {
+        display: none;
+        opacity: 0;
+      }
+
+      label {
+        padding: 8px 16px;
+        border: 1px solid var(--slate-200);
+        background: var(--slate-100);
+        border-radius: 8px;
+        color: var(--slate-700);
       }
     }
   }

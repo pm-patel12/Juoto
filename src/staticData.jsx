@@ -40,3 +40,39 @@ export var discountCouponData = [
     currency: "USD",
   },
 ];
+
+
+export var productCategoriesData = [
+  {
+    id: '1',
+    label: 'Bestseller'
+  },
+  {
+    id: '2',
+    label: 'Newly Launched'
+  },
+  {
+    id: '3',
+    label: 'Pita Pockets'
+  },
+  {
+    id: '4',
+    label: 'Pizzas (Guiltfree)'
+  },
+  {
+    id: '5',
+    label: 'Whole Wheat Sandwiches'
+  },
+  {
+    id: '6',
+    label: 'Fresh Salads'
+  },
+  {
+    id: '7',
+    label: 'Fruit Pop Jars'
+  },
+  {
+    id: '8',
+    label: 'Desserts '
+  },
+]

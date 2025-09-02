@@ -10,6 +10,9 @@ import { TbMapPin } from "react-icons/tb";
 import DiscountCouponCard from "./DiscountCouponCard";
 import { TbShare3 } from "react-icons/tb";
 import { discountCouponData } from "../../staticData";
+import { TbX } from "react-icons/tb";
+import LinearCTA from "./LinearCTA";
+
 
 const HeroSection = () => {
   // Store configuration
@@ -38,7 +41,8 @@ const HeroSection = () => {
       <HeroSlider type={storeConfig.heroSliderType} />
       <div className="container">
         <div className="hero-content">
-          <div className="d-flex align-items-start justify-content-between gap-3 flex-md-nowrap flex-wrap">
+          <div className="d-flex align-items-start justify-content-between gap-3 flex-md-nowrap flex-wrap mb-4">
+            {/* Store informations */}
             <div>
               <h1 className="mb-1">{brandInfo.name}</h1>
               <p className="tag-line mb-4">{brandInfo.tagLine}</p>
@@ -55,6 +59,7 @@ const HeroSection = () => {
                 </li>
               </ul>
             </div>
+            {/* Discount Coupon Card */}
             <div>
               {discountCouponData.length > 0 && (
                 <div className="discount-coupon-wrap mb-2">
@@ -81,6 +86,8 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+          {/* CTA Section */}
+          <LinearCTA />
         </div>
       </div>
     </section>
