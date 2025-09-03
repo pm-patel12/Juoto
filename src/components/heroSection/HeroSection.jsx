@@ -13,7 +13,6 @@ import { discountCouponData } from "../../staticData";
 import { TbX } from "react-icons/tb";
 import LinearCTA from "./LinearCTA";
 
-
 const HeroSection = () => {
   // Store configuration
   const storeConfig = useStoreConfig();
@@ -38,7 +37,7 @@ const HeroSection = () => {
 
   return (
     <section className="hero-sec">
-      <HeroSlider type={storeConfig.heroSliderType} />
+      <HeroSlider />
       <div className="container">
         <div className="hero-content">
           <div className="d-flex align-items-start justify-content-between gap-3 flex-md-nowrap flex-wrap mb-4">

@@ -4,6 +4,7 @@ import { productCard } from "../components/registry";
 import HeroSection from "../components/heroSection/HeroSection";
 import DividerTitle from "../components/DividerTitle";
 import { productCategoriesData } from "../staticData";
+import Bestsellers from "../components/bestsellers/Bestsellers";
 
 const Home = () => {
   // Store configuration
@@ -16,29 +17,34 @@ const Home = () => {
       <HeroSection />
       <div className="container">
         {/* Section Title */}
-        <DividerTitle title='Menu' />
+        <DividerTitle title="Menu" />
         {/* Search bar */}
         <div className="search-bar mb-4">
           <input type="text" placeholder="Search for delicious dishes..." />
         </div>
         {/* Product categories Wrap */}
-        <div className="product-cat-wrap">
-          <ul>
-            {
-              productCategoriesData.length > 0 &&
-              productCategoriesData.map((category, index) => {
+        {productCategoriesData.length > 0 && (
+          <div className="product-cat-wrap section-space">
+            <ul>
+              {productCategoriesData.map((category, index) => {
                 return (
                   <li>
-                    <input type="radio" id={`category${index}`} name="categories" />
+                    <input
+                      type="radio"
+                      id={`category${index}`}
+                      name="categories"
+                      checked={index == 0 && true}
+                    />
                     <label htmlFor={`category${index}`}>{category.label}</label>
                   </li>
-                )
-              })
-            }
-          </ul>
-        </div>
+                );
+              })}
+            </ul>
+          </div>
+        )}
+        {/* Bestseller */}
+        <Bestsellers />
         {/* <ProductCard /> */}
-
       </div>
     </div>
   );
