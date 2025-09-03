@@ -10,8 +10,8 @@ const ProductCard = ({ data }) => {
     <div className="product-card grid">
       <div className="prod-img">
         <img
-          src="https://www.vidhyashomecooking.com/wp-content/uploads/2022/05/SchezwanPaneerPitaPocket.jpg"
-          alt=""
+          src={data.photo}
+          alt={data.name}
         />
       </div>
       <div className="prod-content">

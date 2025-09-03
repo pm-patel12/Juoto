@@ -3,8 +3,9 @@ import { useStoreConfig } from "../StoreConfigContext";
 import { productCard } from "../components/registry";
 import HeroSection from "../components/heroSection/HeroSection";
 import DividerTitle from "../components/DividerTitle";
-import { productCategoriesData } from "../staticData";
+import { ProductsLabelWise, productCategoriesData } from "../staticData";
 import Bestsellers from "../components/bestsellers/Bestsellers";
+import ProductGroup from "../components/productGroup/ProductGroup";
 
 const Home = () => {
   // Store configuration
@@ -28,12 +29,12 @@ const Home = () => {
             <ul>
               {productCategoriesData.map((category, index) => {
                 return (
-                  <li>
+                  <li key={index}>
                     <input
                       type="radio"
                       id={`category${index}`}
                       name="categories"
-                      checked={index == 0 && true}
+                      defaultChecked={index == 0 && true}
                     />
                     <label htmlFor={`category${index}`}>{category.label}</label>
                   </li>
@@ -44,8 +45,10 @@ const Home = () => {
         )}
         {/* Bestseller */}
         <Bestsellers />
-        {/* <ProductCard /> */}
+        {/* Product Group - Products Categories/label Wise */}
+        <ProductGroup />
       </div>
+      {/* Frequently Asked Questions */}
     </div>
   );
 };

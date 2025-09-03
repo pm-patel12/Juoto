@@ -106,11 +106,9 @@
 // Hero Section Content
 // ========================
 .hero-sec {
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--color-primary-300), transparent 90%) 0%,
-    rgba(255, 255, 255, 0%) 100%
-  );
+  background: linear-gradient(180deg,
+      color-mix(in srgb, var(--color-primary-300), transparent 90%) 0%,
+      rgba(255, 255, 255, 0%) 100%);
 
   .hero-content {
     .tag-line {
@@ -174,6 +172,7 @@
     }
   }
 }
+
 .discount-coupon-card {
   padding: 12px 20px;
   border: 1px solid var(--color-primary-200);
@@ -368,7 +367,7 @@
         opacity: 0;
 
         &:checked {
-          & + label {
+          &+label {
             box-shadow: 0px 13px 4px 0px rgba(0, 0, 0, 0%),
               0px 8px 3px 0px rgba(0, 0, 0, 1%),
               0px 5px 3px 0px rgba(0, 0, 0, 5%),
@@ -388,11 +387,112 @@
 // ============================
 .bestsellers-sec {
   padding: 20px;
-  background-color: color-mix(
-    in srgb,
-    var(--color-primary-300),
-    transparent 90%
-  );
+  background-color: color-mix(in srgb,
+      var(--color-primary-300),
+      transparent 90%);
   border-radius: 12px;
   border: 1px dashed var(--color-primary-300);
+  margin-bottom: 30px;
+
+  .best-seller-next,
+  .best-seller-prev {
+    height: 30px;
+    width: 30px;
+    min-height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    background-color: var(--slate-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 21px 6px 0px rgba(0, 0, 0, 0%),
+      0px 13px 5px 0px rgba(0, 0, 0, 1%), 0px 7px 4px 0px rgba(0, 0, 0, 5%),
+      0px 3px 3px 0px rgba(0, 0, 0, 9%), 0px 1px 2px 0px rgba(0, 0, 0, 10%);
+
+    &::after {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.33301 11.6667L5.99967 8.33333L9.33301 5' stroke='%23fff' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      display: block;
+      height: 16px;
+      width: 16px;
+      min-height: 16px;
+      min-width: 16px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &:disabled {
+      background-color: var(--slate-200);
+      opacity: 0.7;
+    }
+
+    &:hover {
+      background-color: var(--slate-600);
+    }
+
+    &.best-seller-next {
+      &::after {
+        rotate: 180deg;
+      }
+    }
+  }
+}
+
+// =============================
+// Product Group Section
+// =============================
+.product-grp-sec {
+  margin-bottom: 30px;
+
+  .product-list-wrap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px 20px;
+  }
+}
+
+// =============================
+// Go To Cart
+// =============================
+.go-to-cart-wrap {
+  padding: 14px;
+  background-color: #009966;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 340px;
+  width: 100%;
+  box-shadow: 0px 83px 23px 0px rgba(0, 0, 0, 0%), 0px 53px 21px 0px rgba(0, 0, 0, 1%), 0px 30px 18px 0px rgba(0, 0, 0, 5%), 0px 13px 13px 0px rgba(0, 0, 0, 9%), 0px 3px 7px 0px rgba(0, 0, 0, 10%);
+
+  span {
+    color: #fff;
+    font-weight: 600;
+    display: block;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  small {
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .ctm-btn {
+    padding: 8px 12px;
+    background-color: #fff;
+    box-shadow: 0px 22px 6px 0px rgba(0, 0, 0, 0%), 0px 14px 6px 0px rgba(0, 0, 0, 1%), 0px 8px 5px 0px rgba(0, 0, 0, 5%), 0px 4px 4px 0px rgba(0, 0, 0, 9%), 0px 1px 2px 0px rgba(0, 0, 0, 10%);
+    line-height: 15px;
+    font-weight: 600;
+    border: 2px solid #007A55;
+    color: var(--slate-900);
+
+    svg,
+    img {
+      height: 18px;
+      width: 18px;
+      stroke: var(--slate-900);
+    }
+  }
 }

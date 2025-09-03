@@ -10,7 +10,7 @@ const apiConfig = {
   headerType: "header1",
   footerType: "footer1",
   productCardType: "list4x5",
-  heroSliderType: "boxed",
+  heroSliderType: "full",
   brandInfo: {
     name: "The Spice Garden – Healthy by EatFit",
     logoLight: brandLogoLight,
@@ -23,7 +23,6 @@ const apiConfig = {
   },
   theme: {
     primaryColor: "#FF2056",
-    secondaryColor: "#171717",
   },
   socialLinks: {
     facebook: "https://facebook.com/juoto",
@@ -38,7 +37,6 @@ const staticConfig = {
   theme: {
     ...apiConfig.theme,
     primaryShades: generateColorShades(apiConfig.theme.primaryColor),
-    secondaryShades: generateColorShades(apiConfig.theme.secondaryColor),
   },
 };
 
