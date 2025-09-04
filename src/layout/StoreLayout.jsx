@@ -6,8 +6,8 @@ import { useStoreConfig } from "../StoreConfigContext";
 const StoreLayout = () => {
   // Store Layout configuration
   const storeConfig = useStoreConfig();
-  const Header = headers[storeConfig.headerType] || headers.header1;
-  const Footer = footers[storeConfig.footerType] || footers.footer1;
+  const Header = headers[storeConfig.theme.headerType] || headers.header1;
+  const Footer = footers[storeConfig.theme.footerType] || footers.footer1;
 
   return (
     <>

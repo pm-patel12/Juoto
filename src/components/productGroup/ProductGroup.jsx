@@ -4,8 +4,12 @@ import ProductCard from '../productCard/ProductCard'
 import { ProductsLabelWise } from '../../staticData'
 import { TbLoader } from "react-icons/tb";
 import { TbShoppingBag } from "react-icons/tb";
+import { useStoreConfig } from '../../StoreConfigContext';
 
 const ProductGroup = () => {
+    // Store configuration
+    const storeConfig = useStoreConfig();
+    const { cardStyle } = storeConfig.theme.prodCardType;
     return (
         <section className='section-space'>
             {
@@ -14,7 +18,7 @@ const ProductGroup = () => {
                         {ProductsLabelWise.map((productGrp, index) => (
                             <div className='product-grp-sec' key={index}>
                                 <DividerTitle title={productGrp.label} side='left' />
-                                <div className="product-list-wrap">
+                                <div className={`product-list-wrap ${cardStyle == 'list' && 'list'}`}>
                                     {
                                         productGrp.products.length > 0 && (
                                             productGrp.products.map((product, index) => (

@@ -7,10 +7,6 @@ import brandLogoLight from "../src/assets/images/brand-logo-light.svg";
 const StoreConfigContext = createContext();
 
 const apiConfig = {
-  headerType: "header1",
-  footerType: "footer1",
-  productCardType: "list4x5",
-  heroSliderType: "full",
   brandInfo: {
     name: "The Spice Garden – Healthy by EatFit",
     logoLight: brandLogoLight,
@@ -23,6 +19,13 @@ const apiConfig = {
   },
   theme: {
     primaryColor: "#FF2056",
+    headerType: "header1",
+    footerType: "footer1",
+    heroSliderType: "full",
+    prodCardType: {
+      cardStyle: 'grid',
+      imgRatio: '2x2'
+    },
   },
   socialLinks: {
     facebook: "https://facebook.com/juoto",

@@ -4,8 +4,12 @@ import { BestsellersProducts } from "../../staticData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import "swiper/css";
+import { useStoreConfig } from "../../StoreConfigContext";
 
 const Bestsellers = () => {
+  // Store configuration
+  const storeConfig = useStoreConfig();
+  const { cardStyle } = storeConfig.theme.prodCardType;
   return (
     <>
       <section className="bestsellers-sec">
@@ -19,7 +23,7 @@ const Bestsellers = () => {
         {BestsellersProducts.length > 0 && (
           <Swiper
             modules={[Navigation, Autoplay, EffectFade]}
-            slidesPerView={5}
+            slidesPerView={cardStyle == 'list' ? 2 : 5}
             loop={true}
             navigation={{
               nextEl: ".best-seller-next",

@@ -6,12 +6,9 @@ import DividerTitle from "../components/DividerTitle";
 import { ProductsLabelWise, productCategoriesData } from "../staticData";
 import Bestsellers from "../components/bestsellers/Bestsellers";
 import ProductGroup from "../components/productGroup/ProductGroup";
+import FaqSection from "../components/faqSection/FaqSection";
 
 const Home = () => {
-  // Store configuration
-  const storeConfig = useStoreConfig();
-  const ProductCard =
-    productCard[storeConfig.productCardType] || productCard.grid2x2;
   return (
     <div>
       {/* Hero Section */}
@@ -49,6 +46,7 @@ const Home = () => {
         <ProductGroup />
       </div>
       {/* Frequently Asked Questions */}
+      <FaqSection />
     </div>
   );
 };

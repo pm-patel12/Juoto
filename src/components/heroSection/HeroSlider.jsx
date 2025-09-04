@@ -11,13 +11,12 @@ import { useStoreConfig } from "../../StoreConfigContext";
 const HeroSlider = () => {
   // Store configuration
   const storeConfig = useStoreConfig();
-  const sliderType = storeConfig.heroSliderType;
+  const sliderType = storeConfig.theme.heroSliderType;
   return (
     <>
       <div
-        className={`heroSliderWrapper ${
-          sliderType == "boxed" ? "boxed" : "full"
-        }`}
+        className={`heroSliderWrapper ${sliderType == "boxed" ? "boxed" : "full"
+          }`}
       >
         <Swiper
           modules={[Navigation, Autoplay, EffectFade]}
