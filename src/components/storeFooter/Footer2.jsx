@@ -5,7 +5,7 @@ import { useTheme } from "../../hook/useTheme";
 import SocialLinks from "../SocialLinks";
 import MenuLinks from "../MenuLinks";
 
-const Footer1 = () => {
+const Footer2 = () => {
   // Store configuration
   const storeConfig = useStoreConfig();
   const brandInfo = storeConfig.brandInfo || {};
@@ -14,7 +14,7 @@ const Footer1 = () => {
   const { theme } = useTheme();
 
   return <>
-    <div className="footer-wrap footer-layout-1">
+    <div className="footer-wrap footer-layout-2">
       <div className="container">
         <div className="inner">
           {/* Brand Logo */}
@@ -38,4 +38,4 @@ const Footer1 = () => {
   </>;
 };
 
-export default Footer1;
+export default Footer2;

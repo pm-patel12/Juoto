@@ -1,26 +1,21 @@
-import Grid2x2 from "./productCard/Grid2x2";
-import Grid4x5 from "./productCard/Grid4x5";
-import List2x2 from "./productCard/List2x2";
-import List4x5 from "./productCard/List4x5";
-import Footer1 from "./StoreFooter/Footer1";
+
+import Footer1 from "./storeFooter/Footer1";
+import Footer2 from "./storeFooter/Footer2";
+import Footer3 from "./storeFooter/Footer3";
 import Header1 from "./StoreHeader/Header1";
 import Header2 from "./StoreHeader/Header2";
+import MobileHeader from "./storeHeader/MobileHeader";
 
 // Store Header Variants Registry
 export const headers = {
       header1: Header1,
-      header2: Header2
+      header2: Header2,
+      mobileHeader: MobileHeader
 };
 
 // Store Footer Variants Registry 
 export const footers = {
       footer1: Footer1,
-};
-
-// Product cards Variants Registry 
-export const productCard = {
-      grid2x2: Grid2x2,
-      grid4x5: Grid4x5,
-      list2x2: List2x2,
-      list4x5: List4x5,
+      footer2: Footer2,
+      footer3: Footer3,
 };

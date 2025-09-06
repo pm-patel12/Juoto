@@ -6,7 +6,7 @@ const FaqSection = () => {
         <>
             {
                 faqsData.length > 0 && (
-                    <section className='faq-sec'>
+                    <section className='faq-sec' id='faqSection'>
                         <div className="container">
                             <div className="inner">
                                 <h2 className='text-center mb-4'>Frequently Asked Questions</h2>

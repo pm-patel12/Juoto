@@ -29,6 +29,11 @@
     position: relative;
     transition: all linear 1s;
 
+    @media (max-width:1260px) {
+      aspect-ratio: 390/108;
+      height: auto;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -59,6 +64,10 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
+
+    @media (max-width:1260px) {
+      display: none;
+    }
   }
 
   .custom-prev,

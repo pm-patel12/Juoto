@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import StoreLayout from "./layout/StoreLayout";
 import { StoreConfigProvider } from "./StoreConfigContext";
 import ThemeVariables from "./utils/ThemeVariables";
+import { ThemeProvider } from "./hook/useTheme";
 
 const App = () => {
   return (
@@ -11,13 +12,15 @@ const App = () => {
       {/* Store Front Routes Starts */}
       <StoreConfigProvider>
         <ThemeVariables />
-        <Router>
-          <Routes>
-            <Route path="" element={<StoreLayout />}>
-              <Route path="/" element={<Home />} />
-            </Route>
-          </Routes>
-        </Router>
+        <ThemeProvider>
+          <Router>
+            <Routes>
+              <Route path="" element={<StoreLayout />}>
+                <Route path="/" element={<Home />} />
+              </Route>
+            </Routes>
+          </Router>
+        </ThemeProvider>
       </StoreConfigProvider>
       {/* Store Front Routes Ends */}
     </>

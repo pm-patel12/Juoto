@@ -3,18 +3,18 @@ import { useStoreConfig } from "../../StoreConfigContext";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../hook/useTheme";
 import SocialLinks from "../SocialLinks";
-import MenuLinks from "../MenuLinks";
 
-const Footer1 = () => {
+const Footer3 = () => {
   // Store configuration
   const storeConfig = useStoreConfig();
   const brandInfo = storeConfig.brandInfo || {};
+  const copyRightText = storeConfig.storeInfo.copyRightText;
 
   // Theme Toggler
   const { theme } = useTheme();
 
   return <>
-    <div className="footer-wrap footer-layout-1">
+    <div className="footer-wrap footer-layout-3">
       <div className="container">
         <div className="inner">
           {/* Brand Logo */}
@@ -26,10 +26,8 @@ const Footer1 = () => {
               alt={brandInfo.name}
             />
           </Link>
-          {/* Nav Menu */}
-          <nav className="nav-menu">
-            <MenuLinks />
-          </nav>
+          {/* CopyRight Text */}
+          <p>{copyRightText}</p>
           {/* Social Links */}
           <SocialLinks />
         </div>
@@ -38,4 +36,4 @@ const Footer1 = () => {
   </>;
 };
 
-export default Footer1;
+export default Footer3;

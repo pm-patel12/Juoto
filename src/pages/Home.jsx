@@ -1,9 +1,7 @@
 import React from "react";
-import { useStoreConfig } from "../StoreConfigContext";
-import { productCard } from "../components/registry";
 import HeroSection from "../components/heroSection/HeroSection";
 import DividerTitle from "../components/DividerTitle";
-import { ProductsLabelWise, productCategoriesData } from "../staticData";
+import { productCategoriesData } from "../staticData";
 import Bestsellers from "../components/bestsellers/Bestsellers";
 import ProductGroup from "../components/productGroup/ProductGroup";
 import FaqSection from "../components/faqSection/FaqSection";

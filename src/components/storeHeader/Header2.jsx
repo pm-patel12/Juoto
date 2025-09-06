@@ -5,11 +5,13 @@ import { TbMoon } from "react-icons/tb";
 import { TbMap2 } from "react-icons/tb";
 import { useTheme } from "../../hook/useTheme";
 import { TbBook2 } from "react-icons/tb";
+import MenuLinks from "../MenuLinks";
 
 const Header2 = () => {
   // Store configuration
   const storeConfig = useStoreConfig();
   const brandInfo = storeConfig.brandInfo || {};
+  const mapLink = storeConfig.brandInfo.mapLink || "";
 
   // Theme Toggler
   const { theme, toggleTheme } = useTheme();
@@ -25,23 +27,7 @@ const Header2 = () => {
             </button>
             {/* Nav Menu */}
             <nav className="nav-menu d-none">
-              <ul>
-                <li>
-                  <Link to="">About</Link>
-                </li>
-                <li>
-                  <Link to="">Gallery</Link>
-                </li>
-                <li>
-                  <Link to="">FAQ’s</Link>
-                </li>
-                <li>
-                  <Link to="">Need Help</Link>
-                </li>
-                <li>
-                  <Link to="">Privacy Policy</Link>
-                </li>
-              </ul>
+              <MenuLinks />
             </nav>
             {/* Brand Logo */}
             <Link to="/" className="brand-logo">
@@ -54,10 +40,10 @@ const Header2 = () => {
             </Link>
             {/* Action buttons */}
             <div className="action-btn-wrap">
-              <button className="ctm-btn white-btn">
+              <Link to={mapLink} target="_blank" className="ctm-btn white-btn">
                 <TbMap2 style={{ stroke: "var(--color-primary-500)" }} />
                 Map Direction
-              </button>
+              </Link>
               {/* Theme Color Toggle */}
               <div className={`themeToggle ${theme}`} onClick={toggleTheme}>
                 <span>

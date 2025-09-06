@@ -4,7 +4,7 @@ import { useStoreConfig } from "../../StoreConfigContext";
 
 const DiscountCouponCard = ({ data }) => {
   const storeConfig = useStoreConfig();
-  const currencySymnol = storeConfig.brandInfo.currencySymnol;
+  const currencySymnol = storeConfig.storeInfo.currencySymnol;
   return (
     <div className="discount-coupon-card">
       <div className="d-flex align-items-center gap-2">
