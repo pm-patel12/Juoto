@@ -8,7 +8,7 @@ const Footer3 = () => {
   // Store configuration
   const storeConfig = useStoreConfig();
   const brandInfo = storeConfig.brandInfo || {};
-  const copyRightText = storeConfig.storeInfo.copyRightText;
+  const copyRightText = storeConfig.brandInfo.copyRightText;
 
   // Theme Toggler
   const { theme } = useTheme();

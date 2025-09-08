@@ -290,6 +290,114 @@ export var BestsellersProducts = [
     ],
   },
 ];
+export var ProductsList = [
+  {
+    name: "Margherita Pizza",
+    description:
+      "Serves 1 | [Energy - 295 kcal | Protein - 12gm] Beetroot hummus and boiled egg with fresh lettuce and black olives in a nutritious pita for a balanced meal.",
+    price: 12.99,
+    discount_price: 10.99,
+    tag: "favorite",
+    is_vegetarian: true,
+    isInStock: true,
+    photo: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
+    variants: [
+      {
+        name: "Small",
+        price: 8.99,
+        discount_price: 7.49,
+        is_vegetarian: true,
+      },
+      {
+        name: "Large",
+        price: 15.99,
+        discount_price: 13.99,
+        is_vegetarian: true,
+      },
+    ],
+  },
+  {
+    name: "Chicken Tikka Masala",
+    description:
+      "Tender chicken cooked in a spiced tomato, cream, and butter sauce, served with rice.",
+    price: 14.99,
+    discount_price: 12.99,
+    tag: "new",
+    is_vegetarian: false,
+    isInStock: true,
+    photo: "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
+    variants: [
+      {
+        name: "Spicy",
+        price: 15.49,
+        discount_price: 13.49,
+        is_vegetarian: false,
+      },
+      {
+        name: "Mild",
+        price: 14.99,
+        discount_price: 12.99,
+        is_vegetarian: false,
+      },
+    ],
+  },
+  {
+    name: "Vegetable Stir Fry",
+    description:
+      "Fresh mixed vegetables stir-fried with soy sauce and sesame oil, served with noodles.",
+    price: 10.49,
+    discount_price: null,
+    tag: null,
+    is_vegetarian: true,
+    isInStock: true,
+    photo: "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
+    variants: [],
+  },
+  {
+    name: "Beef Burger",
+    description:
+      "Juicy beef patty with lettuce, tomato, and special sauce on a sesame bun.",
+    price: 9.99,
+    discount_price: 8.49,
+    tag: "favorite",
+    is_vegetarian: false,
+    isInStock: true,
+    photo: "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
+    variants: [
+      {
+        name: "With Cheese",
+        price: 10.49,
+        discount_price: 8.99,
+        is_vegetarian: false,
+      },
+      {
+        name: "Double Patty",
+        price: 12.99,
+        discount_price: 10.99,
+        is_vegetarian: false,
+      },
+    ],
+  },
+  {
+    name: "Caesar Salad",
+    description:
+      "Crisp romaine lettuce with Caesar dressing, croutons, and parmesan cheese.",
+    price: 7.99,
+    discount_price: null,
+    tag: null,
+    is_vegetarian: true,
+    isInStock: true,
+    photo: "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
+    variants: [
+      {
+        name: "With Grilled Chicken",
+        price: 9.99,
+        discount_price: null,
+        is_vegetarian: false,
+      },
+    ],
+  },
+];
 export var ProductsLabelWise = [
   {
     label: "🔔 Hot Release: Newly Launched",

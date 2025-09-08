@@ -36,7 +36,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="hero-sec">
+    <section className="hero-sec section-space">
       <HeroSlider />
       <div className="container">
         <div className="hero-content">

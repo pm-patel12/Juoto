@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
-import { useStoreConfig } from "../../StoreConfigContext";
+import { useStoreConfig } from "../StoreConfigContext";
 
 const ProductCard = ({ data }) => {
   // Store configuration
   const storeConfig = useStoreConfig();
-  const currencySymnol = storeConfig.storeInfo.currencySymnol;
+  const currencySymnol = storeConfig.brandInfo.currencySymnol;
   const { cardStyle, imgRatio } = storeConfig.theme.prodCardType;
 
   if (cardStyle == 'list') {

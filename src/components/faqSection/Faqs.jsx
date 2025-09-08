@@ -1,7 +1,7 @@
 import React from 'react'
 import { faqsData } from '../../staticData'
 
-const FaqSection = () => {
+const Faqs = () => {
     return (
         <>
             {
@@ -37,4 +37,4 @@ const FaqSection = () => {
     )
 }
 
-export default FaqSection
+export default Faqs

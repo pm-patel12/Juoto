@@ -14,9 +14,7 @@ const apiConfig = {
     tagLine: "Where Every Bite Tells a Story",
     number: "+931 587 28 538 55",
     address: "121 Town Crest Road #123 Fort Saskatchewan AB. T8L0G7",
-    mapLink: 'https://www.google.com/maps/place/Ahmedabad,+Gujarat,+India'
-  },
-  storeInfo: {
+    mapLink: 'https://www.google.com/maps/place/Ahmedabad,+Gujarat,+India',
     currency: "USD",
     currencySymnol: "$",
     copyRightText: "© Copyright 2025 TheSpiceGardens. All Rights Reserved."
@@ -46,9 +44,20 @@ const apiConfig = {
     { "id": 3, "name": "FAQ’s", "type": "page", "path": '#faqSection' },
     { "id": 4, "name": "Need Help", "type": "popup", "popupId": 'contactModal' },
     { "id": 5, "name": "Privacy Policy", "type": "popup", "popupId": 'privacyPolicyModal' }
+  ],
+  sectionsLayout: [
+    { "id": 1, "name": "Announcement bar", "type": "announcement", "enabled": true, },
+    { "id": 2, "name": "Header", "type": "header", "enabled": true, },
+    { "id": 3, "name": "Hero Image Slider", "type": "hero", "enabled": true, },
+    { "id": 4, "name": "Custom CTA", "type": "cta", "enabled": true, },
+    { "id": 5, "name": "Categories | Menu", "type": "categoryMenu", "enabled": true, },
+    { "id": 6, "name": "Best Selling Products", "type": "bestsellers", "enabled": true, "categoryId": null },
+    { "id": 7, "name": "🔔 Hot Release: Newly Launched", "type": "category", "enabled": true, "categoryId": 5 },
+    { "id": 7, "name": "Pita Pockets 🍕", "type": "category", "enabled": true, "categoryId": 5 },
+    { "id": 7, "name": "Pita Pizzas (Guiltfree)", "type": "category", "enabled": true, "categoryId": 5 },
+    { "id": 8, "name": "FAQ’s", "type": "faq", "enabled": true, },
+    { "id": 9, "name": "Footer", "type": "footer", "enabled": false, }
   ]
-
-
 };
 
 // enrich theme with shades
