@@ -20,10 +20,10 @@ const apiConfig = {
     copyRightText: "© Copyright 2025 TheSpiceGardens. All Rights Reserved.",
   },
   theme: {
-    primaryColor: "#FF2056",
+    primaryColor: "#c50000ff",
     headerType: "header1",
     footerType: "footer1",
-    heroSliderType: "full",
+    heroSliderType: "boxed",
     prodCardType: {
       cardStyle: "grid",
       imgRatio: "2x2",
@@ -81,6 +81,7 @@ const apiConfig = {
     },
   ],
   sectionsLayout: [
+    { id: 0, name: "Header", type: "header", enabled: true },
     { id: 1, name: "Announcement bar", type: "announcement", enabled: true },
     { id: 3, name: "Hero Image Slider", type: "hero", enabled: true },
     { id: 4, name: "Custom CTA", type: "cta", enabled: true },
@@ -114,6 +115,7 @@ const apiConfig = {
       categoryId: 5,
     },
     { id: 10, name: "FAQ’s", type: "faq", enabled: true },
+    { id: 11, name: "Footer", type: "footer", enabled: true },
   ],
 };
 

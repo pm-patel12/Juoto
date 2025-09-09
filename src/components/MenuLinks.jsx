@@ -40,17 +40,22 @@ const MenuLinks = () => {
   }
 
   return (
-    <nav>
-      <ul>
-        {menus.map((menu) => (
-          <li key={menu.id}>
-            <button type="button" onClick={() => handleClick(menu)}>
-              {menu.name}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      <nav>
+        <ul>
+          {menus.map((menu) => (
+            <li key={menu.id}>
+              <button type="button" onClick={() => handleClick(menu)}>
+                {menu.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      {/* Page Modal */}
+
+
+    </>
   );
 };
 

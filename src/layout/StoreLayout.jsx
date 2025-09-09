@@ -2,9 +2,6 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { headers, footers } from "../components/registry";
 import { useStoreConfig } from "../StoreConfigContext";
-import PrivacyPolicyModal from "../components/modals/PrivacyPolicyModal";
-import ContactModal from "../components/modals/ContactModal";
-import GalleryModal from "../components/modals/GalleryModal";
 import { useIsMobile } from "../hook/useIsMobile";
 import PageModal from "../components/modals/PageModal";
 
@@ -23,16 +20,7 @@ const StoreLayout = () => {
 
   return (
     <main>
-      <header className="store-header">
-        <FinalHeader />
-      </header>
-      <div className="store-body">
-        <Outlet />
-      </div>
-      <footer className="store-footer">
-        <Footer />
-      </footer>
-
+      <Outlet />
       {/* mount modals globally */}
       <PageModal />
     </main>
