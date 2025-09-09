@@ -5,8 +5,8 @@ import { useStoreConfig } from "../StoreConfigContext";
 import PrivacyPolicyModal from "../components/modals/PrivacyPolicyModal";
 import ContactModal from "../components/modals/ContactModal";
 import GalleryModal from "../components/modals/GalleryModal";
-import AboutModal from "../components/modals/AboutModal";
 import { useIsMobile } from "../hook/useIsMobile";
+import PageModal from "../components/modals/PageModal";
 
 const StoreLayout = () => {
   const storeConfig = useStoreConfig();
@@ -34,10 +34,7 @@ const StoreLayout = () => {
       </footer>
 
       {/* mount modals globally */}
-      <AboutModal />
-      <GalleryModal />
-      <ContactModal />
-      <PrivacyPolicyModal />
+      <PageModal />
     </main>
   );
 };

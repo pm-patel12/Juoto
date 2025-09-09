@@ -29,7 +29,7 @@
     position: relative;
     transition: all linear 1s;
 
-    @media (max-width:1260px) {
+    @media (max-width: 1260px) {
       aspect-ratio: 390/108;
       height: auto;
     }
@@ -65,7 +65,7 @@
     justify-content: space-between;
     margin: 0 auto;
 
-    @media (max-width:1260px) {
+    @media (max-width: 1260px) {
       display: none;
     }
   }
@@ -115,9 +115,11 @@
 // Hero Section Content
 // ========================
 .hero-sec {
-  background: linear-gradient(180deg,
-      color-mix(in srgb, var(--color-primary-300), transparent 90%) 0%,
-      rgba(255, 255, 255, 0%) 100%);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-primary-300), transparent 90%) 0%,
+    rgba(255, 255, 255, 0%) 100%
+  );
 
   .hero-content {
     .tag-line {
@@ -376,7 +378,7 @@
         opacity: 0;
 
         &:checked {
-          &+label {
+          & + label {
             box-shadow: 0px 13px 4px 0px rgba(0, 0, 0, 0%),
               0px 8px 3px 0px rgba(0, 0, 0, 1%),
               0px 5px 3px 0px rgba(0, 0, 0, 5%),
@@ -396,9 +398,11 @@
 // ============================
 .bestsellers-sec {
   padding: 20px;
-  background-color: color-mix(in srgb,
-      var(--color-primary-300),
-      transparent 90%);
+  background-color: color-mix(
+    in srgb,
+    var(--color-primary-300),
+    transparent 90%
+  );
   border-radius: 12px;
   border: 1px dashed var(--color-primary-300);
   margin-bottom: 30px;
@@ -452,7 +456,6 @@
 // Product Group Section
 // =============================
 .product-grp-sec {
-
   .product-list-wrap {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -477,7 +480,9 @@
   justify-content: space-between;
   max-width: 340px;
   width: 100%;
-  box-shadow: 0px 83px 23px 0px rgba(0, 0, 0, 0%), 0px 53px 21px 0px rgba(0, 0, 0, 1%), 0px 30px 18px 0px rgba(0, 0, 0, 5%), 0px 13px 13px 0px rgba(0, 0, 0, 9%), 0px 3px 7px 0px rgba(0, 0, 0, 10%);
+  box-shadow: 0px 83px 23px 0px rgba(0, 0, 0, 0%),
+    0px 53px 21px 0px rgba(0, 0, 0, 1%), 0px 30px 18px 0px rgba(0, 0, 0, 5%),
+    0px 13px 13px 0px rgba(0, 0, 0, 9%), 0px 3px 7px 0px rgba(0, 0, 0, 10%);
 
   span {
     color: #fff;
@@ -495,10 +500,12 @@
   .ctm-btn {
     padding: 8px 12px;
     background-color: #fff;
-    box-shadow: 0px 22px 6px 0px rgba(0, 0, 0, 0%), 0px 14px 6px 0px rgba(0, 0, 0, 1%), 0px 8px 5px 0px rgba(0, 0, 0, 5%), 0px 4px 4px 0px rgba(0, 0, 0, 9%), 0px 1px 2px 0px rgba(0, 0, 0, 10%);
+    box-shadow: 0px 22px 6px 0px rgba(0, 0, 0, 0%),
+      0px 14px 6px 0px rgba(0, 0, 0, 1%), 0px 8px 5px 0px rgba(0, 0, 0, 5%),
+      0px 4px 4px 0px rgba(0, 0, 0, 9%), 0px 1px 2px 0px rgba(0, 0, 0, 10%);
     line-height: 15px;
     font-weight: 600;
-    border: 2px solid #007A55;
+    border: 2px solid #007a55;
     color: var(--slate-900);
 
     svg,
@@ -570,6 +577,75 @@
         &::after {
           border-color: var(--text-900);
           background-image: url("data:image/svg+xml,%3Csvg width='18' height='19' viewBox='0 0 18 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_372_446)'%3E%3Cpath d='M5 7L9.5 11.5L14 7' stroke='%23fff' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_372_446'%3E%3Crect width='18' height='18' fill='white' transform='matrix(1 0 0 -1 0 18.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+  }
+}
+
+// ===========================
+// Modal
+// ===========================
+.modal {
+  &.slide-to-left {
+    .modal-dialog {
+      transform: translateX(100%);
+      transition: transform 0.6s ease-out;
+    }
+    &.show {
+      .modal-dialog {
+        transform: translateX(0);
+      }
+    }
+  }
+  .modal-dialog {
+    height: 100vh;
+    max-width: 670px;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px;
+    margin: 0 0 0 auto;
+    .modal-content {
+      background-color: var(--white);
+      border-radius: 10px;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 20px;
+      .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--slate-200);
+        h3 {
+          margin: 0;
+          padding: 0;
+        }
+        button {
+          position: absolute;
+          right: 12px;
+          top: 19px;
+          background-color: transparent;
+          padding: 6px;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            height: 20px;
+            width: 20px;
+          }
+
+          &:hover {
+            background-color: var(--slate-200);
+
+            svg {
+              rotate: 90deg;
+            }
+          }
         }
       }
     }

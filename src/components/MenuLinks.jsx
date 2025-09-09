@@ -1,58 +1,57 @@
-import { useMemo, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useStoreConfig } from '../StoreConfigContext';
-import { useModal } from '../hook/useModal';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useStoreConfig } from "../StoreConfigContext";
+import { useModal } from "../hook/useModal";
 
 const MenuLinks = () => {
-    // Store configuration
-    const storeConfig = useStoreConfig();
-    const navMenus = storeConfig.navMenus;
+  // Store configuration (static for now, API later)
+  const storeConfig = useStoreConfig();
+  const navMenus = storeConfig.navMenus;
 
-    const [menus, setMenus] = useState([]);
-    const navigate = useNavigate();
-    const { openModal } = useModal();
+  const [menus, setMenus] = useState([]);
+  const navigate = useNavigate();
+  const { openModal } = useModal();
 
-    useMemo(() => {
-        setMenus(navMenus)
-    }, []);
+  // Load menus from store config
+  useEffect(() => {
+    setMenus(navMenus);
+  }, [navMenus]);
 
+  const handleClick = (menu) => {
+    console.log("Clicked menu:", menu);
 
-    const handleClick = (menu) => {
-        console.log(menu)
-        if (menu.type === "page") {
-            if (menu.path.startsWith("#")) {
-                const element = document.querySelector(menu.path);
-                if (element) {
-                    element.scrollIntoView({ behavior: "smooth" });
-                }
-            } else {
-                navigate(menu.path);
-            }
-        } else if (menu.type === "popup" && menu.popupId) {
-            console.log(menu.popupId)
-            openModal(menu.popupId);
+    if (menu.type === "page") {
+      if (menu.path?.startsWith("#")) {
+        const element = document.querySelector(menu.path);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
         }
-    };
-
-
-    if (menus.length <= 0) {
-        return;
+      } else if (menu.path) {
+        navigate(menu.path);
+      }
+    } else if (menu.type === "popup" && menu.popupId) {
+      // openModal accepts modal id and data (menu info)
+      openModal("pageModal", { menu });
     }
-    return (
-        <>
-            <ul>
-                {
-                    menus.map((menu, index) => {
-                        return (
-                            <li key={index}>
-                                <button onClick={() => handleClick(menu)}>{menu.name}</button>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-        </>
-    )
-}
+  };
 
-export default MenuLinks
+  if (menus.length <= 0) {
+    return null;
+  }
+
+  return (
+    <nav>
+      <ul>
+        {menus.map((menu) => (
+          <li key={menu.id}>
+            <button type="button" onClick={() => handleClick(menu)}>
+              {menu.name}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
+
+export default MenuLinks;
