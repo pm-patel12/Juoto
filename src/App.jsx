@@ -5,6 +5,7 @@ import StoreLayout from "./layout/StoreLayout";
 import { StoreConfigProvider } from "./StoreConfigContext";
 import ThemeVariables from "./utils/ThemeVariables";
 import { ThemeProvider } from "./hook/useTheme";
+import CheckOut from "./pages/CheckOut";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Routes>
               <Route path="" element={<StoreLayout />}>
                 <Route path="/" element={<Home />} />
+                <Route path="/checkout" element={<CheckOut />} />
               </Route>
             </Routes>
           </Router>

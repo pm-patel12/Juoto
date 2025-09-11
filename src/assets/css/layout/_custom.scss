@@ -115,9 +115,11 @@
 // Hero Section Content
 // ========================
 .hero-sec {
-  background: linear-gradient(180deg,
-      color-mix(in srgb, var(--color-primary-300), transparent 90%) 0%,
-      rgba(255, 255, 255, 0%) 100%);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-primary-300), transparent 90%) 0%,
+    rgba(255, 255, 255, 0%) 100%
+  );
 
   .hero-content {
     .tag-line {
@@ -376,7 +378,7 @@
         opacity: 0;
 
         &:checked {
-          &+label {
+          & + label {
             box-shadow: 0px 13px 4px 0px rgba(0, 0, 0, 0%),
               0px 8px 3px 0px rgba(0, 0, 0, 1%),
               0px 5px 3px 0px rgba(0, 0, 0, 5%),
@@ -396,9 +398,11 @@
 // ============================
 .bestsellers-sec {
   padding: 20px;
-  background-color: color-mix(in srgb,
-      var(--color-primary-300),
-      transparent 90%);
+  background-color: color-mix(
+    in srgb,
+    var(--color-primary-300),
+    transparent 90%
+  );
   border-radius: 12px;
   border: 1px dashed var(--color-primary-300);
   margin-bottom: 30px;
@@ -648,6 +652,83 @@
               rotate: 90deg;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+// ===========================
+// CheckOut Page
+// ===========================
+.checkout-page {
+  background-color: var(--slate-100);
+  min-height: 100vh;
+}
+// ===========================
+// Checkout services
+// ===========================
+.multi-option-select-wrap {
+  display: flex;
+  flex-flow: column;
+  gap: 12px;
+  .card {
+    padding: 10px 16px;
+    border: 1px solid var(--slate-300);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row;
+    gap: 16px;
+    cursor: pointer;
+
+    .icon {
+      height: 18px;
+      width: 18px;
+      min-height: 18px;
+      min-width: 18px;
+      border: 1px solid var(--slate-300);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        height: 10px;
+        width: 10px;
+        stroke-width: 5px;
+        stroke: #fff;
+      }
+    }
+    p {
+      font-size: 16px;
+      color: var(--slate-900);
+      margin-bottom: 5px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--slate-700);
+      }
+    }
+  }
+  input[type="radio"] {
+    display: none;
+    opacity: 0;
+
+    &:checked {
+      & + .card {
+        border: 1px solid var(--slate-900);
+        box-shadow: 0px 30px 8px 0px rgba(0, 0, 0, 0%),
+          0px 1px 3px 0px rgba(0, 0, 0, 10%);
+        .icon {
+          background-color: var(--slate-900);
+          border-color: var(--slate-900);
         }
       }
     }

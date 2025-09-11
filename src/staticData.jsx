@@ -86,7 +86,8 @@ export var BestsellersProducts = [
     tag: "favorite",
     is_vegetarian: true,
     isInStock: true,
-    photo: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
+    photo:
+      "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
     variants: [
       {
         name: "Small",
@@ -111,7 +112,8 @@ export var BestsellersProducts = [
     tag: "new",
     is_vegetarian: false,
     isInStock: true,
-    photo: "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
+    photo:
+      "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
     variants: [
       {
         name: "Spicy",
@@ -136,7 +138,8 @@ export var BestsellersProducts = [
     tag: null,
     is_vegetarian: true,
     isInStock: true,
-    photo: "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
+    photo:
+      "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
     variants: [],
   },
   {
@@ -148,7 +151,8 @@ export var BestsellersProducts = [
     tag: "favorite",
     is_vegetarian: false,
     isInStock: true,
-    photo: "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
+    photo:
+      "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
     variants: [
       {
         name: "With Cheese",
@@ -173,7 +177,8 @@ export var BestsellersProducts = [
     tag: null,
     is_vegetarian: true,
     isInStock: true,
-    photo: "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
+    photo:
+      "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
     variants: [
       {
         name: "With Grilled Chicken",
@@ -192,7 +197,8 @@ export var BestsellersProducts = [
     tag: "favorite",
     is_vegetarian: true,
     isInStock: true,
-    photo: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
+    photo:
+      "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
     variants: [
       {
         name: "Small",
@@ -217,7 +223,8 @@ export var BestsellersProducts = [
     tag: "new",
     is_vegetarian: false,
     isInStock: true,
-    photo: "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
+    photo:
+      "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
     variants: [
       {
         name: "Spicy",
@@ -242,7 +249,8 @@ export var BestsellersProducts = [
     tag: null,
     is_vegetarian: true,
     isInStock: true,
-    photo: "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
+    photo:
+      "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
     variants: [],
   },
   {
@@ -254,7 +262,8 @@ export var BestsellersProducts = [
     tag: "favorite",
     is_vegetarian: false,
     isInStock: true,
-    photo: "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
+    photo:
+      "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
     variants: [
       {
         name: "With Cheese",
@@ -279,7 +288,8 @@ export var BestsellersProducts = [
     tag: null,
     is_vegetarian: true,
     isInStock: true,
-    photo: "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
+    photo:
+      "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
     variants: [
       {
         name: "With Grilled Chicken",
@@ -300,7 +310,8 @@ export var ProductsList = [
     tag: "favorite",
     is_vegetarian: true,
     isInStock: true,
-    photo: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
+    photo:
+      "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
     variants: [
       {
         name: "Small",
@@ -325,7 +336,8 @@ export var ProductsList = [
     tag: "new",
     is_vegetarian: false,
     isInStock: true,
-    photo: "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
+    photo:
+      "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
     variants: [
       {
         name: "Spicy",
@@ -350,7 +362,8 @@ export var ProductsList = [
     tag: null,
     is_vegetarian: true,
     isInStock: true,
-    photo: "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
+    photo:
+      "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
     variants: [],
   },
   {
@@ -362,7 +375,8 @@ export var ProductsList = [
     tag: "favorite",
     is_vegetarian: false,
     isInStock: true,
-    photo: "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
+    photo:
+      "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
     variants: [
       {
         name: "With Cheese",
@@ -387,7 +401,8 @@ export var ProductsList = [
     tag: null,
     is_vegetarian: true,
     isInStock: true,
-    photo: "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
+    photo:
+      "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
     variants: [
       {
         name: "With Grilled Chicken",
@@ -411,7 +426,8 @@ export var ProductsLabelWise = [
         tag: "favorite",
         is_vegetarian: true,
         isInStock: true,
-        photo: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
+        photo:
+          "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
         variants: [
           {
             name: "Small",
@@ -436,7 +452,8 @@ export var ProductsLabelWise = [
         tag: "new",
         is_vegetarian: false,
         isInStock: true,
-        photo: "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
+        photo:
+          "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
         variants: [
           {
             name: "Spicy",
@@ -461,7 +478,8 @@ export var ProductsLabelWise = [
         tag: null,
         is_vegetarian: true,
         isInStock: true,
-        photo: "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
+        photo:
+          "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
         variants: [],
       },
       {
@@ -473,7 +491,8 @@ export var ProductsLabelWise = [
         tag: "favorite",
         is_vegetarian: false,
         isInStock: true,
-        photo: "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
+        photo:
+          "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
         variants: [
           {
             name: "With Cheese",
@@ -498,7 +517,8 @@ export var ProductsLabelWise = [
         tag: null,
         is_vegetarian: true,
         isInStock: true,
-        photo: "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
+        photo:
+          "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
         variants: [
           {
             name: "With Grilled Chicken",
@@ -508,7 +528,7 @@ export var ProductsLabelWise = [
           },
         ],
       },
-    ]
+    ],
   },
   {
     label: "Pita Pockets",
@@ -522,7 +542,8 @@ export var ProductsLabelWise = [
         tag: "favorite",
         is_vegetarian: true,
         isInStock: true,
-        photo: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
+        photo:
+          "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
         variants: [
           {
             name: "Small",
@@ -547,7 +568,8 @@ export var ProductsLabelWise = [
         tag: "new",
         is_vegetarian: false,
         isInStock: true,
-        photo: "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
+        photo:
+          "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
         variants: [
           {
             name: "Spicy",
@@ -572,7 +594,8 @@ export var ProductsLabelWise = [
         tag: null,
         is_vegetarian: true,
         isInStock: true,
-        photo: "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
+        photo:
+          "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
         variants: [],
       },
       {
@@ -584,7 +607,8 @@ export var ProductsLabelWise = [
         tag: "favorite",
         is_vegetarian: false,
         isInStock: true,
-        photo: "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
+        photo:
+          "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
         variants: [
           {
             name: "With Cheese",
@@ -609,7 +633,8 @@ export var ProductsLabelWise = [
         tag: null,
         is_vegetarian: true,
         isInStock: true,
-        photo: "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
+        photo:
+          "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
         variants: [
           {
             name: "With Grilled Chicken",
@@ -619,7 +644,7 @@ export var ProductsLabelWise = [
           },
         ],
       },
-    ]
+    ],
   },
   {
     label: "Pita Pizzas (Guiltfree)",
@@ -633,7 +658,8 @@ export var ProductsLabelWise = [
         tag: "favorite",
         is_vegetarian: true,
         isInStock: true,
-        photo: "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
+        photo:
+          "https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg",
         variants: [
           {
             name: "Small",
@@ -658,7 +684,8 @@ export var ProductsLabelWise = [
         tag: "new",
         is_vegetarian: false,
         isInStock: true,
-        photo: "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
+        photo:
+          "https://littlesunnykitchen.com/wp-content/uploads/Chicke-tikka-masala-2-7.jpg",
         variants: [
           {
             name: "Spicy",
@@ -683,7 +710,8 @@ export var ProductsLabelWise = [
         tag: null,
         is_vegetarian: true,
         isInStock: true,
-        photo: "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
+        photo:
+          "https://www.dinneratthezoo.com/wp-content/uploads/2019/02/vegetable-stir-fry-3.jpg",
         variants: [],
       },
       {
@@ -695,7 +723,8 @@ export var ProductsLabelWise = [
         tag: "favorite",
         is_vegetarian: false,
         isInStock: false,
-        photo: "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
+        photo:
+          "https://www.recipetineats.com/tachyon/2019/08/Avocado-Chicken-Burgers_9.jpg",
         variants: [
           {
             name: "With Cheese",
@@ -720,7 +749,8 @@ export var ProductsLabelWise = [
         tag: null,
         is_vegetarian: true,
         isInStock: true,
-        photo: "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
+        photo:
+          "https://frenchkisscook.com/wp-content/uploads/2023/09/Greek-Caesar-Salad-with-Chicken-Vertical-Zoom.jpg",
         variants: [
           {
             name: "With Grilled Chicken",
@@ -730,39 +760,83 @@ export var ProductsLabelWise = [
           },
         ],
       },
-    ]
+    ],
   },
 ];
-
-
 
 export var faqsData = [
   {
-    question: 'Q1. Do you offer home delivery?',
-    answer: 'Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 '
+    question: "Q1. Do you offer home delivery?",
+    answer:
+      "Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 ",
   },
   {
-    question: 'Q2. Can I customize my pizza toppings?',
-    answer: 'Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 '
+    question: "Q2. Can I customize my pizza toppings?",
+    answer:
+      "Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 ",
   },
   {
-    question: 'Q3. Do you have vegetarian and vegan options?',
-    answer: 'Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 '
+    question: "Q3. Do you have vegetarian and vegan options?",
+    answer:
+      "Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 ",
   },
   {
-    question: 'Q4. How can I place an order?',
-    answer: 'Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 '
+    question: "Q4. How can I place an order?",
+    answer:
+      "Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 ",
   },
   {
-    question: 'Q5. What are your restaurant hours?',
-    answer: 'Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 '
+    question: "Q5. What are your restaurant hours?",
+    answer:
+      "Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 ",
   },
   {
-    question: 'Q6. Do you offer special deals or discounts?',
-    answer: 'Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 '
+    question: "Q6. Do you offer special deals or discounts?",
+    answer:
+      "Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 ",
   },
   {
-    question: 'Q7. Where are you located?',
-    answer: 'Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 '
+    question: "Q7. Where are you located?",
+    answer:
+      "Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 ",
   },
 ];
+
+export var deliveryType = [
+  {
+    id: 1,
+    title: "Same Day Delivery",
+    instructions: [
+      "Fee based on distance",
+      "Free delivery over €15.00 items order",
+      "Minimum order items €15.00",
+    ],
+  },
+  {
+    id: 2,
+    title: "Standard delivery",
+    instructions: [
+      "Fee based on distance",
+      "Free delivery over €30.00 items order",
+      "Minimum order items €15.00",
+      "deliver withing 2 to 3 working days after order",
+    ],
+  },
+  {
+    id: 3,
+    title: "Selected Day Delivery",
+    instructions: [
+      "Fee based on distance",
+      "Free delivery over €30.00 items order",
+      "Minimum order items €15.00",
+      "deliver as per select your date ",
+    ],
+  },
+  {
+    id: 4,
+    title: "Self Pick up",
+    instructions: ["Free delivery"],
+  },
+];
+
+export var paymentOptions = [{}];
