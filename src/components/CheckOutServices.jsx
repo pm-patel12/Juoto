@@ -20,7 +20,7 @@ const CheckOutServices = () => {
                     id={`checkoutService${item.id}`}
                   />
                   <label htmlFor={`checkoutService${item.id}`} className="card">
-                    <div className="icon">
+                    <div className="check-icon">
                       <TbCheck />
                     </div>
                     <div className="">

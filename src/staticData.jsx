@@ -1,3 +1,7 @@
+import bankAccount from "../src/assets/images/icons/bank-account.svg"
+import cashDelivery from "../src/assets/images/icons/cash-delivery.svg"
+import upi from "../src/assets/images/icons/upi.png"
+
 export var discountCouponData = [
   {
     discount: 2.0,
@@ -40,7 +44,6 @@ export var discountCouponData = [
     currency: "USD",
   },
 ];
-
 export var productCategoriesData = [
   {
     id: "1",
@@ -75,7 +78,6 @@ export var productCategoriesData = [
     label: "Desserts ",
   },
 ];
-
 export var BestsellersProducts = [
   {
     name: "Margherita Pizza",
@@ -763,7 +765,6 @@ export var ProductsLabelWise = [
     ],
   },
 ];
-
 export var faqsData = [
   {
     question: "Q1. Do you offer home delivery?",
@@ -801,7 +802,6 @@ export var faqsData = [
       "Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 Yes! We deliver hot and fresh pizzas right to your doorstep within 30–40 minutes. 🚚🔥 ",
   },
 ];
-
 export var deliveryType = [
   {
     id: 1,
@@ -838,5 +838,23 @@ export var deliveryType = [
     instructions: ["Free delivery"],
   },
 ];
-
-export var paymentOptions = [{}];
+export var paymentOptions = [
+  {
+    id: 1,
+    icon: cashDelivery,
+    title: "Cash On Delivery",
+    instructions: "Extra $2 COD Charge",
+  },
+  {
+    id: 2,
+    icon: bankAccount,
+    title: "Direct Bank Account",
+    instructions: "Take payments in person via BACS.",
+  },
+  {
+    id: 3,
+    icon: upi,
+    title: "Pay on UPI",
+    instructions: "10% OFF on via UPI Payment",
+  },
+];

@@ -1,6 +1,8 @@
 import CheckOutServices from "../components/CheckOutServices";
+import PaymentOptions from "../components/PaymentOptions";
 import CheckOutHeader from "../components/storeHeader/CheckOutHeader";
 import { TbSquarePlus } from "react-icons/tb";
+import { TbTrash } from "react-icons/tb";
 
 const CheckOut = () => {
   return (
@@ -12,11 +14,12 @@ const CheckOut = () => {
         <div className="container">
           <div className="row py-4">
             <div className="col-md-6 col-12 mb-3">
+              {/* Customer Details Form */}
               <div className="card p-3 mb-3">
                 <div className="d-flex align-items-center justify-content-between gap-2 flex-wrap">
                   <p className="m-0 fw-semibold">Customer Details</p>
                   <button className="ctm-btn dull-btn btn-sm">
-                    <TbSquarePlus style={{ stroke: "var(--slate-700" }} />
+                    <TbSquarePlus style={{ stroke: "var(--text-700" }} />
                     Add item
                   </button>
                 </div>
@@ -50,7 +53,42 @@ const CheckOut = () => {
                   </div>
                 </div>
               </div>
+              {/* Checkout Services/Delivery Type */}
               <CheckOutServices />
+              {/* Payment Options */}
+              <PaymentOptions />
+            </div>
+            <div className="col-md-6 col-12 mb-3">
+              <div className="card p-3 mb-3">
+                <div className="cart-product-card">
+                  <div className="d-flex align-items-center gap-2 flex-wrap flex-sm-nowrap">
+                    <div className="prod-img">
+                      <img src="" alt="" />
+                    </div>
+                    <div>
+                      <p className="mb-1">Capsicum Pizza [8 inches]</p>
+                      <div className="d-flex flex-wrap gap-3">
+                        <div className="d-flex gap-2 align-items-center">
+                          <span className="small m-0 fw-semibold">18$</span>
+                          <s className="small m-0 light-text">18$</s>
+                        </div>
+                        <ul className="d-flex gap-2 flex-wrap align-items-center">
+                          <li>Regular</li>
+                          <li>Extra cheese</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-2 align-items-center justify-content-between">
+                    <div className="prod-counter">
+                      <button>-</button>
+                      <input type="text" value="1" />
+                      <button>+</button>
+                    </div>
+                    <button className="delete-btn"><TbTrash /></button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

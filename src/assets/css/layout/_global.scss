@@ -39,6 +39,23 @@
   margin-bottom: 50px !important;
 }
 
+
+// ===========================
+// Card
+// ===========================
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--slate-300);
+  border-radius: 10px;
+}
+
+[data-theme='dark'] {
+  .card {
+    background-color: var(--slate-900);
+    border-color: var(--slate-700);
+  }
+}
+
 // ===========================
 // Divider Title (Center, Left, Right)
 // ===========================
@@ -53,6 +70,7 @@
   justify-content: center;
   padding: 0;
   margin-bottom: 30px;
+  min-height: 8px;
 
   span {
     color: var(--text-700);
@@ -475,4 +493,15 @@
   em {
     font-style: italic;
   }
+}
+
+// =================================
+// Global Color Classes
+// =================================
+.bg-dark {
+  background-color: var(--slate-900);
+}
+
+.light-text {
+  color: var(--text-700);
 }
