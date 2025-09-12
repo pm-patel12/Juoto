@@ -153,6 +153,9 @@ small {
 // ==========================
 // Button Style
 // ==========================
+button {
+  background: transparent;
+}
 .ctm-btn {
   padding: 8px 12px;
   border-radius: 8px;
@@ -192,6 +195,13 @@ small {
     background-color: var(--slate-100);
     color: var(--text-700);
   }
+  &:disabled,
+  &.disabled {
+    border: 1px solid var(--slate-100);
+    background-color: var(--slate-100);
+    color: var(--text-700);
+    cursor: not-allowed;
+  }
 
   &.dark-theme {
     background-color: var(--slate-950);
@@ -202,9 +212,10 @@ small {
     font-size: 16px;
     line-height: 22px;
     padding: 12px;
-    box-shadow: 0px 22px 6px 0px rgba(0, 0, 0, 0%), 0px 14px 6px 0px rgba(0, 0, 0, 1%), 0px 8px 5px 0px rgba(0, 0, 0, 5%), 0px 4px 4px 0px rgba(0, 0, 0, 9%), 0px 1px 2px 0px rgba(0, 0, 0, 10%);
+    box-shadow: 0px 22px 6px 0px rgba(0, 0, 0, 0%),
+      0px 14px 6px 0px rgba(0, 0, 0, 1%), 0px 8px 5px 0px rgba(0, 0, 0, 5%),
+      0px 4px 4px 0px rgba(0, 0, 0, 9%), 0px 1px 2px 0px rgba(0, 0, 0, 10%);
   }
-
 }
 
 // =========================

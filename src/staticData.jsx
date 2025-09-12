@@ -1,6 +1,6 @@
-import bankAccount from "../src/assets/images/icons/bank-account.svg"
-import cashDelivery from "../src/assets/images/icons/cash-delivery.svg"
-import upi from "../src/assets/images/icons/upi.png"
+import bankAccount from "../src/assets/images/icons/bank-account.svg";
+import cashDelivery from "../src/assets/images/icons/cash-delivery.svg";
+import upi from "../src/assets/images/icons/upi.png";
 
 export var discountCouponData = [
   {
@@ -843,18 +843,21 @@ export var paymentOptions = [
     id: 1,
     icon: cashDelivery,
     title: "Cash On Delivery",
+    type: "cod",
     instructions: "Extra $2 COD Charge",
   },
   {
     id: 2,
     icon: bankAccount,
     title: "Direct Bank Account",
+    type: "bank",
     instructions: "Take payments in person via BACS.",
   },
   {
     id: 3,
     icon: upi,
     title: "Pay on UPI",
+    type: "upi",
     instructions: "10% OFF on via UPI Payment",
   },
 ];

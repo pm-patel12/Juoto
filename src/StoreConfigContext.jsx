@@ -19,6 +19,14 @@ const apiConfig = {
     currencySymnol: "$",
     copyRightText: "© Copyright 2025 TheSpiceGardens. All Rights Reserved.",
   },
+  paymentInfo: {
+    accountType: "Current Account",
+    accountNumber: "12345678901212",
+    ifscCode: "ICICI00242412",
+    bankName: "ICICI Bank",
+    branchName: "Naroda Branch",
+    upiId: "patelparth654321-2@okaxis",
+  },
   theme: {
     primaryColor: "#c50000ff",
     headerType: "header1",

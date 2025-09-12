@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import StoreLayout from "./layout/StoreLayout";
@@ -8,6 +8,18 @@ import { ThemeProvider } from "./hook/useTheme";
 import CheckOut from "./pages/CheckOut";
 
 const App = () => {
+  // Bootstrap tooltips
+  useEffect(() => {
+    const tooltipTriggerList = document.querySelectorAll(
+      '[data-bs-toggle="tooltip"]'
+    );
+    const tooltipList = [...tooltipTriggerList].map(
+      (tooltipTriggerEl) => new window.bootstrap.Tooltip(tooltipTriggerEl)
+    );
+    return () => {
+      tooltipList.forEach((tooltip) => tooltip.dispose());
+    };
+  }, []);
   return (
     <>
       {/* Store Front Routes Starts */}
