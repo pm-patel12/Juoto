@@ -806,6 +806,7 @@ export var deliveryType = [
   {
     id: 1,
     title: "Same Day Delivery",
+    type: "same-day-delivery",
     instructions: [
       "Fee based on distance",
       "Free delivery over €15.00 items order",
@@ -815,6 +816,7 @@ export var deliveryType = [
   {
     id: 2,
     title: "Standard delivery",
+    type: "standard-delivery",
     instructions: [
       "Fee based on distance",
       "Free delivery over €30.00 items order",
@@ -825,6 +827,7 @@ export var deliveryType = [
   {
     id: 3,
     title: "Selected Day Delivery",
+    type: "selected-day-delivery",
     instructions: [
       "Fee based on distance",
       "Free delivery over €30.00 items order",
@@ -835,6 +838,7 @@ export var deliveryType = [
   {
     id: 4,
     title: "Self Pick up",
+    type: "self-pick-up",
     instructions: ["Free delivery"],
   },
 ];
