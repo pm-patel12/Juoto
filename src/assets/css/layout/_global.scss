@@ -624,7 +624,8 @@ hr {
     opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease;
     color: var(--white);
-    padding: 0 16px;
+    padding: 0 12px;
+    font-size: 14px;
   }
 
   .counter-ui {

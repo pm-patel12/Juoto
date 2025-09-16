@@ -27,6 +27,46 @@ const apiConfig = {
     branchName: "Naroda Branch",
     upiId: "patelparth654321-2@okaxis",
   },
+  openingHours: {
+    status: "open",
+    hours: [
+      {
+        day: "Sunday",
+        open: "12:00 AM",
+        close: "09:00 PM",
+      },
+      {
+        day: "Monday",
+        open: "12:00 AM",
+        close: "09:00 PM",
+      },
+      {
+        day: "Tuesday",
+        open: "12:00 AM",
+        close: "09:00 PM",
+      },
+      {
+        day: "Wednesday",
+        open: "12:00 AM",
+        close: "09:00 PM",
+      },
+      {
+        day: "Thursday",
+        open: "12:00 AM",
+        close: "09:00 PM",
+      },
+      {
+        day: "Friday",
+        open: "12:00 AM",
+        close: "09:00 PM",
+      },
+      {
+        day: "Saturday",
+        open: "12:00 AM",
+        close: "09:00 PM",
+      },
+    ],
+  },
   theme: {
     primaryColor: "#c50000ff",
     headerType: "header1",

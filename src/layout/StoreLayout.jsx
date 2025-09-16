@@ -4,6 +4,7 @@ import { headers, footers } from "../components/registry";
 import { useStoreConfig } from "../StoreConfigContext";
 import { useIsMobile } from "../hook/useIsMobile";
 import PageModal from "../components/modals/PageModal";
+import ProductDetailModal from "../components/modals/ProductDetailModal";
 
 const StoreLayout = () => {
   const storeConfig = useStoreConfig();
@@ -21,8 +22,10 @@ const StoreLayout = () => {
   return (
     <main>
       <Outlet />
-      {/* mount modals globally */}
+      {/* Page modals */}
       <PageModal />
+      {/* Product Details Modal */}
+      <ProductDetailModal />
     </main>
   );
 };

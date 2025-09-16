@@ -591,6 +591,60 @@
     .modal-dialog {
       transform: translateX(100%);
       transition: transform 0.6s ease-in-out;
+      height: 100vh;
+      max-width: 670px;
+      width: 100%;
+      background-color: transparent;
+      padding: 20px;
+      margin: 0 0 0 auto;
+
+      .modal-content {
+        background-color: var(--white);
+        border-radius: 10px;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 20px;
+
+        .modal-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0;
+          padding-bottom: 20px;
+          border-bottom: 1px solid var(--slate-200);
+
+          h3 {
+            margin: 0;
+            padding: 0;
+          }
+
+          button {
+            position: absolute;
+            right: 12px;
+            top: 19px;
+            background-color: transparent;
+            padding: 6px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+              height: 20px;
+              width: 20px;
+            }
+
+            &:hover {
+              background-color: var(--slate-200);
+
+              svg {
+                rotate: 90deg;
+              }
+            }
+          }
+        }
+      }
     }
 
     &.show {
@@ -599,58 +653,202 @@
       }
     }
   }
+}
 
-  .modal-dialog {
-    height: 100vh;
-    max-width: 670px;
-    width: 100%;
-    background-color: transparent;
-    padding: 20px;
-    margin: 0 0 0 auto;
+// ===========================
+// Open Hours Modal
+// ===========================
+.open-hours-modal {
+  padding: 20px 16px;
+  position: relative;
+  background-color: var(--white);
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  .close-btn {
+    position: absolute;
+    background-color: var(--white);
+    z-index: 100;
+    top: -23px;
+    right: -23px;
+    height: 30px;
+    width: 30px;
+    min-height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-bottom: 18px;
+    span {
+      padding: 4px 8px;
+      border-radius: 100px;
+      font-size: 10px;
+      line-height: 14px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      &.open {
+        background: linear-gradient(180deg, #00bc7d 0%, #004f3b 100%);
+      }
+      &.close {
+        background: linear-gradient(180deg, #ff6467 0%, #82181a 100%);
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+      &.open {
+        background-color: var(--emerald-600);
+        color: var(--emerald-200);
+        span {
+          color: #fff;
+        }
+      }
+      &.close {
+        background-color: var(--slate-100);
+        color: var(--text-500);
+        span {
+          color: var(--text-500);
+        }
+      }
+      i {
+        font-size: inherit;
+        color: inherit;
+      }
+      span {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        color: var(--text-700);
 
-    .modal-content {
-      background-color: var(--white);
-      border-radius: 10px;
-      height: 100%;
-      overflow-y: auto;
-      overflow-x: hidden;
-      padding: 20px;
+        &:first-child {
+          width: 80px;
+        }
+      }
+    }
+  }
+}
 
-      .modal-header {
+// ===========================
+// Product Details Modal
+// ===========================
+.product-details-modal {
+  background-color: var(--white);
+  border-radius: 12px;
+  max-width: 762px;
+  width: 100%;
+  padding: 16px 18px;
+  position: relative;
+
+  .close-btn {
+    position: absolute;
+    background-color: var(--white);
+    z-index: 100;
+    top: -23px;
+    right: -23px;
+    height: 30px;
+    width: 30px;
+    min-height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inner {
+    display: flex;
+    gap: 20px;
+    .prodImg {
+      flex: 1;
+      aspect-ratio: 1/1;
+      max-width: 350px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--slate-300);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .tag {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 4px 8px;
+        border-radius: 100px;
+        font-size: 10px;
+        line-height: 14px;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: linear-gradient(180deg, #00bc7d 0%, #004f3b 100%);
+      }
+    }
+    .prodDetail {
+      flex: 1;
+      position: relative;
+      h3 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--slate-700);
+      }
+      .prod-meta {
+        position: sticky;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0;
-        padding-bottom: 20px;
-        border-bottom: 1px solid var(--slate-200);
-
-        h3 {
-          margin: 0;
-          padding: 0;
-        }
-
-        button {
-          position: absolute;
-          right: 12px;
-          top: 19px;
-          background-color: transparent;
-          padding: 6px;
-          border-radius: 4px;
+        gap: 20px;
+        padding-top: 16px;
+        border-top: 1px solid var(--slate-200);
+        .price-wrap {
           display: flex;
           align-items: center;
-          justify-content: center;
-
-          svg {
-            height: 20px;
-            width: 20px;
-          }
-
-          &:hover {
-            background-color: var(--slate-200);
-
-            svg {
-              rotate: 90deg;
-            }
+          justify-content: flex-start;
+          gap: 6px;
+          font-size: 18px;
+          font-weight: 700;
+          color: var(--text-900);
+          s {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-500);
           }
         }
       }

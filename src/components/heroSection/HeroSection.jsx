@@ -10,13 +10,17 @@ import { TbMapPin } from "react-icons/tb";
 import DiscountCouponCard from "./DiscountCouponCard";
 import { TbShare3 } from "react-icons/tb";
 import { discountCouponData } from "../../staticData";
-import { TbX } from "react-icons/tb";
+import { TbInfoCircle } from "react-icons/tb";
 import LinearCTA from "./LinearCTA";
+import { useModal } from "../../hook/useModal";
+import OpenHoursModal from "../modals/OpenHoursModal";
 
 const HeroSection = () => {
   // Store configuration
   const storeConfig = useStoreConfig();
   const brandInfo = storeConfig.brandInfo;
+
+  const { openModal } = useModal();
 
   //   Share Page Handler
   const handleShare = async () => {
@@ -52,6 +56,12 @@ const HeroSection = () => {
                 <li>
                   <TbClock />
                   Open | 11:00 AM – 11:00 PM
+                  <button
+                    className="d-flex align-items-center"
+                    onClick={() => openModal("openHoursModal")}
+                  >
+                    <TbInfoCircle style={{ stroke: "var(--text-600" }} />
+                  </button>
                 </li>
                 <li>
                   <TbMapPin /> {brandInfo.address}
@@ -89,6 +99,7 @@ const HeroSection = () => {
           <LinearCTA />
         </div>
       </div>
+      <OpenHoursModal />
     </section>
   );
 };
