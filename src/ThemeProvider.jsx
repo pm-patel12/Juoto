@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useState } from "react";
-import { generateColorShades } from "./utils/generateShades";
+import { generateColorShades } from "./utils/GenerateShades";
 
 import brandLogoDark from "../src/assets/images/brand-logo-dark.svg";
 import brandLogoLight from "../src/assets/images/brand-logo-light.svg";
