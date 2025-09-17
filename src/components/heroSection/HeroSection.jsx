@@ -71,7 +71,7 @@ const HeroSection = () => {
             {/* Discount Coupon Card */}
             <div>
               {discountCouponData.length > 0 && (
-                <div className="discount-coupon-wrap mb-2">
+                <div className="discount-coupon-wrap mb-2" data-cursor="slider">
                   <Swiper
                     modules={[Pagination]}
                     slidesPerView={1}

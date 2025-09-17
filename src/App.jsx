@@ -5,6 +5,7 @@ import StoreLayout from "./layout/StoreLayout";
 import ThemeVariables from "./utils/ThemeVariables";
 import { AppProvider } from "./ThemeProvider";
 import CheckOut from "./pages/CheckOut";
+import CursorEffect from "./utils/CursorEffects";
 
 const App = () => {
   // Bootstrap tooltips
@@ -23,6 +24,7 @@ const App = () => {
     <>
       {/* Store Front Routes Starts */}
       <AppProvider>
+        <CursorEffect />
         <ThemeVariables />
         <Router>
           <Routes>
