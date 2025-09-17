@@ -1,26 +1,19 @@
 import { useEffect } from "react";
-import { useStoreConfig } from "../StoreConfigContext";
+import { useAppContext } from "../ThemeProvider";
 
 const ThemeVariables = () => {
-  const { theme } = useStoreConfig();
+  const { themeColors } = useAppContext();
 
   useEffect(() => {
     const root = document.documentElement;
 
     // Primary Shades
-    if (theme?.primaryShades) {
-      Object.entries(theme.primaryShades).forEach(([key, value]) => {
+    if (themeColors) {
+      Object.entries(themeColors).forEach(([key, value]) => {
         root.style.setProperty(`--color-primary-${key}`, value);
       });
     }
-
-    // Secondary Shades
-    if (theme?.secondaryShades) {
-      Object.entries(theme.secondaryShades).forEach(([key, value]) => {
-        root.style.setProperty(`--color-secondary-${key}`, value);
-      });
-    }
-  }, [theme]);
+  }, [themeColors]);
 
   return null;
 };

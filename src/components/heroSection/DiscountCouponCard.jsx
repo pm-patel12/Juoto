@@ -1,9 +1,9 @@
 import React from "react";
 import { TbCirclePercentageFilled } from "react-icons/tb";
-import { useStoreConfig } from "../../StoreConfigContext";
+import { useAppContext } from "../../ThemeProvider";
 
 const DiscountCouponCard = ({ data }) => {
-  const storeConfig = useStoreConfig();
+  const { storeConfig } = useAppContext();
   const currencySymnol = storeConfig.brandInfo.currencySymnol;
   return (
     <div className="discount-coupon-card">

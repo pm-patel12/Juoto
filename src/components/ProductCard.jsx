@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useStoreConfig } from "../StoreConfigContext";
 import { useModal } from "../hook/useModal";
+import { useAppContext } from "../ThemeProvider";
 
 const ProductCard = ({ data }) => {
   // Store configuration
-  const storeConfig = useStoreConfig();
+  const { storeConfig } = useAppContext();
   const currencySymnol = storeConfig.brandInfo.currencySymnol;
   const { cardStyle, imgRatio } = storeConfig.theme.prodCardType;
 
@@ -19,8 +19,7 @@ const ProductCard = ({ data }) => {
     return (
       <div
         className={`action-wrap ${showCounter ? "show-counter" : ""}`}
-        // onClick={() => !showCounter && setShowCounter(true)}
-        onClick={() => openModal("productDetailModal")}
+        onClick={() => !showCounter && setShowCounter(true)}
       >
         <span className="btn-label">ADD</span>
 
@@ -38,6 +37,7 @@ const ProductCard = ({ data }) => {
       <div className={`product-list ${!data.isInStock && "outofstock"}`}>
         <div
           className={`prod-img ${imgRatio === "2x2" ? "square" : "rectangle"}`}
+          onClick={() => openModal("productDetailModal")}
         >
           <img src={data.photo} alt={data.name} />
         </div>
@@ -66,6 +66,7 @@ const ProductCard = ({ data }) => {
     <div className={`product-grid ${!data.isInStock && "outofstock"}`}>
       <div
         className={`prod-img ${imgRatio === "2x2" ? "square" : "rectangle"}`}
+        onClick={() => openModal("productDetailModal")}
       >
         <img src={data.photo} alt={data.name} />
       </div>

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useStoreConfig } from "../StoreConfigContext";
 import { useModal } from "../hook/useModal";
+import { useAppContext } from "../ThemeProvider";
 
 const MenuLinks = () => {
   // Store configuration (static for now, API later)
-  const storeConfig = useStoreConfig();
+  const { storeConfig } = useAppContext();
   const navMenus = storeConfig.navMenus;
 
   const [menus, setMenus] = useState([]);
@@ -18,8 +18,6 @@ const MenuLinks = () => {
   }, [navMenus]);
 
   const handleClick = (menu) => {
-    console.log("Clicked menu:", menu);
-
     if (menu.type === "page") {
       if (menu.path?.startsWith("#")) {
         const element = document.querySelector(menu.path);
@@ -53,8 +51,6 @@ const MenuLinks = () => {
         </ul>
       </nav>
       {/* Page Modal */}
-
-
     </>
   );
 };

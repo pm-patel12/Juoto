@@ -2,9 +2,8 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import StoreLayout from "./layout/StoreLayout";
-import { StoreConfigProvider } from "./StoreConfigContext";
 import ThemeVariables from "./utils/ThemeVariables";
-import { ThemeProvider } from "./hook/useTheme";
+import { AppProvider } from "./ThemeProvider";
 import CheckOut from "./pages/CheckOut";
 
 const App = () => {
@@ -23,19 +22,17 @@ const App = () => {
   return (
     <>
       {/* Store Front Routes Starts */}
-      <StoreConfigProvider>
+      <AppProvider>
         <ThemeVariables />
-        <ThemeProvider>
-          <Router>
-            <Routes>
-              <Route path="" element={<StoreLayout />}>
-                <Route path="/" element={<Home />} />
-                <Route path="/checkout" element={<CheckOut />} />
-              </Route>
-            </Routes>
-          </Router>
-        </ThemeProvider>
-      </StoreConfigProvider>
+        <Router>
+          <Routes>
+            <Route path="" element={<StoreLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/checkout" element={<CheckOut />} />
+            </Route>
+          </Routes>
+        </Router>
+      </AppProvider>
       {/* Store Front Routes Ends */}
     </>
   );

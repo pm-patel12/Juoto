@@ -4,7 +4,6 @@ import { useModal } from "../../hook/useModal";
 
 const PageModal = ({ children }) => {
   const { closeModal } = useModal();
-  console.log("menu from modal", children);
   return (
     <div
       className="modal slide-to-left"
@@ -20,9 +19,7 @@ const PageModal = ({ children }) => {
               <TbX />
             </button>
           </div>
-          <div className="modal-body">
-            {children}
-          </div>
+          <div className="modal-body">{children}</div>
         </div>
       </div>
     </div>

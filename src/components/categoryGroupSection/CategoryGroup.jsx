@@ -1,46 +1,48 @@
-import React from 'react'
-import DividerTitle from '../DividerTitle'
-import ProductCard from '../ProductCard'
-import { ProductsList } from '../../staticData'
+import React from "react";
+import DividerTitle from "../DividerTitle";
+import ProductCard from "../ProductCard";
+import { ProductsList } from "../../staticData";
 import { TbLoader } from "react-icons/tb";
 import { TbShoppingBag } from "react-icons/tb";
-import { useStoreConfig } from '../../StoreConfigContext';
+import { useAppContext } from "../../ThemeProvider";
 
 const CategoryGroup = ({ title }) => {
-    // Store configuration
-    const storeConfig = useStoreConfig();
-    const { cardStyle } = storeConfig.theme.prodCardType;
-    return (
-        <div className="container">
-            <section className='product-grp-sec section-space'>
-                {
-                    ProductsList.length > 0 && (
-                        <>
-                            <DividerTitle title={title} side='left' />
-                            <div className={`product-list-wrap ${cardStyle == 'list' && 'list'}`}>
-                                {ProductsList.map((product, index) => (
-                                    <div key={index}>
-                                        <ProductCard data={product} />
-                                    </div>
-                                ))}
-                            </div>
-                        </>
-                    )
-                }
-                <div className="d-flex align-items-center gap-2 justify-content-center flex-wrap">
-                    <button className="ctm-btn white-btn">
-                        <TbLoader />Click to view more items...</button>
-                    {/* <div className="go-to-cart-wrap">
+  // Store configuration
+  const { storeConfig } = useAppContext();
+  const { cardStyle } = storeConfig.theme.prodCardType;
+  return (
+    <div className="container">
+      <section className="product-grp-sec section-space">
+        {ProductsList.length > 0 && (
+          <>
+            <DividerTitle title={title} side="left" />
+            <div
+              className={`product-list-wrap ${cardStyle == "list" && "list"}`}
+            >
+              {ProductsList.map((product, index) => (
+                <div key={index}>
+                  <ProductCard data={product} />
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+        <div className="d-flex align-items-center gap-2 justify-content-center flex-wrap">
+          <button className="ctm-btn white-btn">
+            <TbLoader />
+            Click to view more items...
+          </button>
+          {/* <div className="go-to-cart-wrap">
                         <div>
                             <span>12 items</span>
                             <small>Added in cart</small>
                         </div>
                         <button className='ctm-btn white-btn'><TbShoppingBag />GO TO CART</button>
                     </div> */}
-                </div>
-            </section>
         </div>
-    )
-}
+      </section>
+    </div>
+  );
+};
 
-export default CategoryGroup
+export default CategoryGroup;

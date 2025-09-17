@@ -6,17 +6,18 @@ import {
   Navigation,
 } from "swiper/modules";
 import "swiper/css";
-import { useStoreConfig } from "../../StoreConfigContext";
+import { useAppContext } from "../../ThemeProvider";
 
 const HeroSlider = () => {
   // Store configuration
-  const storeConfig = useStoreConfig();
+  const { storeConfig } = useAppContext();
   const sliderType = storeConfig.theme.heroSliderType;
   return (
     <>
       <div
-        className={`heroSliderWrapper ${sliderType == "boxed" ? "boxed" : "full"
-          }`}
+        className={`heroSliderWrapper ${
+          sliderType == "boxed" ? "boxed" : "full"
+        }`}
       >
         <Swiper
           modules={[Navigation, Autoplay, EffectFade]}

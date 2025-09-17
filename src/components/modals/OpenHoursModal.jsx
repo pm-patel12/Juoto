@@ -1,12 +1,12 @@
 import React from "react";
-import { useStoreConfig } from "../../StoreConfigContext";
 import { TbX } from "react-icons/tb";
+import { useAppContext } from "../../ThemeProvider";
 
 const OpenHoursModal = () => {
   const todayName = new Date().toLocaleDateString("en-US", { weekday: "long" });
 
   // Store configuration
-  const storeConfig = useStoreConfig();
+  const { storeConfig } = useAppContext();
   const openingStatus = storeConfig.openingHours.status;
   const openingHours = storeConfig.openingHours.hours;
   // const { openModal, closeModal } = useModal();

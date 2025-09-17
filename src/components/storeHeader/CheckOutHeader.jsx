@@ -1,15 +1,14 @@
-import { useStoreConfig } from "../../StoreConfigContext";
 import { Link } from "react-router-dom";
-import { useTheme } from "../../hook/useTheme";
+import { useAppContext } from "../../ThemeProvider";
 import { TbLockSquareRounded } from "react-icons/tb";
 
 const CheckOutHeader = () => {
   // Store configuration
-  const storeConfig = useStoreConfig();
+  const { storeConfig } = useAppContext();
   const brandInfo = storeConfig.brandInfo || {};
 
   // Theme Toggler
-  const { theme } = useTheme();
+  const { theme } = useAppContext();
 
   return (
     <>

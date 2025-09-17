@@ -1,19 +1,18 @@
-import { useStoreConfig } from "../../StoreConfigContext";
 import { Link } from "react-router-dom";
 import { TbSun } from "react-icons/tb";
 import { TbMoon } from "react-icons/tb";
 import { TbMap2 } from "react-icons/tb";
-import { useTheme } from "../../hook/useTheme";
+import { useAppContext } from "../../ThemeProvider";
 import MenuLinks from "../MenuLinks";
 
 const Header1 = () => {
   // Store configuration
-  const storeConfig = useStoreConfig();
+  const { storeConfig } = useAppContext();
   const brandInfo = storeConfig.brandInfo || {};
   const mapLink = storeConfig.brandInfo.mapLink || "";
 
   // Theme Toggler
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useAppContext();
 
   return (
     <>

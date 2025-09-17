@@ -1,10 +1,11 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { generateColorShades } from "./utils/generateShades";
+
 import brandLogoDark from "../src/assets/images/brand-logo-dark.svg";
 import brandLogoLight from "../src/assets/images/brand-logo-light.svg";
 
-const StoreConfigContext = createContext();
+const AppContext = createContext();
 
 const apiConfig = {
   brandInfo: {
@@ -30,41 +31,13 @@ const apiConfig = {
   openingHours: {
     status: "open",
     hours: [
-      {
-        day: "Sunday",
-        open: "12:00 AM",
-        close: "09:00 PM",
-      },
-      {
-        day: "Monday",
-        open: "12:00 AM",
-        close: "09:00 PM",
-      },
-      {
-        day: "Tuesday",
-        open: "12:00 AM",
-        close: "09:00 PM",
-      },
-      {
-        day: "Wednesday",
-        open: "12:00 AM",
-        close: "09:00 PM",
-      },
-      {
-        day: "Thursday",
-        open: "12:00 AM",
-        close: "09:00 PM",
-      },
-      {
-        day: "Friday",
-        open: "12:00 AM",
-        close: "09:00 PM",
-      },
-      {
-        day: "Saturday",
-        open: "12:00 AM",
-        close: "09:00 PM",
-      },
+      { day: "Sunday", open: "12:00 AM", close: "09:00 PM" },
+      { day: "Monday", open: "12:00 AM", close: "09:00 PM" },
+      { day: "Tuesday", open: "12:00 AM", close: "09:00 PM" },
+      { day: "Wednesday", open: "12:00 AM", close: "09:00 PM" },
+      { day: "Thursday", open: "12:00 AM", close: "09:00 PM" },
+      { day: "Friday", open: "12:00 AM", close: "09:00 PM" },
+      { day: "Saturday", open: "12:00 AM", close: "09:00 PM" },
     ],
   },
   theme: {
@@ -167,21 +140,30 @@ const apiConfig = {
   ],
 };
 
-// enrich theme with shades
-const staticConfig = {
-  ...apiConfig,
-  theme: {
-    ...apiConfig.theme,
-    primaryShades: generateColorShades(apiConfig.theme.primaryColor),
-  },
-};
+// Add theme shades
+const themeColors = generateColorShades(apiConfig.theme.primaryColor);
 
-export const StoreConfigProvider = ({ children }) => {
+export const AppProvider = ({ children, defaultTheme = "light" }) => {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || defaultTheme
+  );
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
   return (
-    <StoreConfigContext.Provider value={staticConfig}>
+    <AppContext.Provider
+      value={{ theme, toggleTheme, themeColors, storeConfig: apiConfig }}
+    >
       {children}
-    </StoreConfigContext.Provider>
+    </AppContext.Provider>
   );
 };
 
-export const useStoreConfig = () => useContext(StoreConfigContext);
+export const useAppContext = () => useContext(AppContext);

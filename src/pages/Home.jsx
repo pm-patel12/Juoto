@@ -1,14 +1,15 @@
 import HeroSection from "../components/heroSection/HeroSection";
-import { headers, footers } from "../components/registry"; import Faqs from "../components/faqSection/Faqs";
+import { headers, footers } from "../components/registry";
+import Faqs from "../components/faqSection/Faqs";
 import Bestsellers from "../components/bestsellersSection/Bestsellers";
 import CategoriesList from "../components/categoriesListSection/CategoriesList";
 import CategoryGroup from "../components/categoryGroupSection/CategoryGroup";
-import { useStoreConfig } from "../StoreConfigContext";
 import { useIsMobile } from "../hook/useIsMobile";
+import { useAppContext } from "../ThemeProvider";
 
 const Home = () => {
   // Store configuration
-  const storeConfig = useStoreConfig();
+  const { storeConfig } = useAppContext();
   const sectionsLayout = storeConfig.sectionsLayout;
   const isMobile = useIsMobile(991);
 
@@ -36,7 +37,9 @@ const Home = () => {
       case "bestsellers":
         return <Bestsellers />;
       case "category":
-        return <CategoryGroup categoryId={section.categoryId} title={section.name} />;
+        return (
+          <CategoryGroup categoryId={section.categoryId} title={section.name} />
+        );
       case "faq":
         return <Faqs />;
       case "footer":
@@ -62,4 +65,3 @@ const Home = () => {
 };
 
 export default Home;
-

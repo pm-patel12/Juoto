@@ -2,15 +2,15 @@ import { paymentOptions } from "../staticData";
 import { TbCheck, TbCopyCheckFilled } from "react-icons/tb";
 import DividerTitle from "./DividerTitle";
 import { useState } from "react";
-import { useStoreConfig } from "../StoreConfigContext";
 import { TbCopy } from "react-icons/tb";
 import { useClipboard } from "../hook/useClipboard";
 import { TbUpload } from "react-icons/tb";
 import { TbExclamationCircle } from "react-icons/tb";
+import { useAppContext } from "../ThemeProvider";
 
 const PaymentOptions = () => {
   // Store configuration
-  const storeConfig = useStoreConfig();
+  const { storeConfig } = useAppContext();
   const bankInfo = storeConfig.paymentInfo;
 
   const [selected, setSelected] = useState(null);

@@ -163,6 +163,7 @@ hr {
     overflow: hidden;
     border-radius: 6px;
     border: 1px solid var(--slate-300);
+    cursor: pointer;
 
     &.square {
       aspect-ratio: 2 / 2;
@@ -262,6 +263,7 @@ hr {
     overflow: hidden;
     border-radius: 6px;
     border: 1px solid var(--slate-300);
+    cursor: pointer;
 
     &.square {
       aspect-ratio: 2 / 2;

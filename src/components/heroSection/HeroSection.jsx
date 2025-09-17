@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useStoreConfig } from "../../StoreConfigContext";
 import HeroSlider from "./HeroSlider";
 import { TbPhoneCall } from "react-icons/tb";
 import { TbClock } from "react-icons/tb";
@@ -14,10 +13,11 @@ import { TbInfoCircle } from "react-icons/tb";
 import LinearCTA from "./LinearCTA";
 import { useModal } from "../../hook/useModal";
 import OpenHoursModal from "../modals/OpenHoursModal";
+import { useAppContext } from "../../ThemeProvider";
 
 const HeroSection = () => {
   // Store configuration
-  const storeConfig = useStoreConfig();
+  const { storeConfig } = useAppContext();
   const brandInfo = storeConfig.brandInfo;
 
   const { openModal } = useModal();

@@ -65,7 +65,10 @@ const CheckOut = () => {
                   <div className="cart-product-card">
                     <div className="d-flex align-items-start gap-2 flex-wrap flex-sm-nowrap">
                       <div className="prod-img">
-                        <img src="" alt="" />
+                        <img
+                          src="https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg"
+                          alt=""
+                        />
                       </div>
                       <div>
                         <p className="mb-1">Capsicum Pizza [8 inches]</p>
@@ -96,7 +99,10 @@ const CheckOut = () => {
                   <div className="cart-product-card">
                     <div className="d-flex align-items-start gap-2 flex-wrap flex-sm-nowrap">
                       <div className="prod-img">
-                        <img src="" alt="" />
+                        <img
+                          src="https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg"
+                          alt=""
+                        />
                       </div>
                       <div>
                         <p className="mb-1">Capsicum Pizza [8 inches]</p>
@@ -122,7 +128,10 @@ const CheckOut = () => {
                   <div className="cart-product-card">
                     <div className="d-flex align-items-start gap-2 flex-wrap flex-sm-nowrap">
                       <div className="prod-img">
-                        <img src="" alt="" />
+                        <img
+                          src="https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg"
+                          alt=""
+                        />
                       </div>
                       <div>
                         <p className="mb-1">Capsicum Pizza [8 inches]</p>
@@ -151,7 +160,10 @@ const CheckOut = () => {
                   <div className="cart-product-card">
                     <div className="d-flex align-items-start gap-2 flex-wrap flex-sm-nowrap">
                       <div className="prod-img">
-                        <img src="" alt="" />
+                        <img
+                          src="https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg"
+                          alt=""
+                        />
                       </div>
                       <div>
                         <p className="mb-1">Capsicum Pizza [8 inches]</p>

@@ -1,14 +1,7 @@
 import React from "react";
-import { useStoreConfig } from "../../StoreConfigContext";
-import { TbX } from "react-icons/tb";
-
+import { TbCheck, TbX } from "react-icons/tb";
+import nonVag from "../../assets/images/icons/non-vag.svg";
 const ProductDetailModal = () => {
-  const todayName = new Date().toLocaleDateString("en-US", { weekday: "long" });
-
-  // Store configuration
-  const storeConfig = useStoreConfig();
-  const openingStatus = storeConfig.openingHours.status;
-  const openingHours = storeConfig.openingHours.hours;
   // const { openModal, closeModal } = useModal();
 
   return (
@@ -19,7 +12,7 @@ const ProductDetailModal = () => {
       tabIndex="-1"
     >
       <div className="modal-dialog modal-dialog-centered modal-lg">
-        <div className="modal-content bg-transparent">
+        <div className="modal-content bg-transparent border-0">
           <div className="product-details-modal">
             <button
               className="close-btn"
@@ -37,12 +30,96 @@ const ProductDetailModal = () => {
                 />
               </div>
               <div className="prodDetail">
-                <h3>Grilled Chicken and Hummus Pita Pocket</h3>
-                <p>
-                  Serves 1 | [Energy - 295 kcal | Protein - 12gm] Beetroot
-                  hummus and boiled egg with fresh lettuce and black olives in a
-                  nutritious pita for a balanced meal.
-                </p>
+                <div className="prod-info">
+                  <h3>Grilled Chicken and Hummus Pita Pocket</h3>
+                  <p>
+                    Serves 1 | [Energy - 295 kcal | Protein - 12gm] Beetroot
+                    hummus and boiled egg with fresh lettuce and black olives in
+                    a nutritious pita for a balanced meal.
+                  </p>
+                  <div className="prod-variation">
+                    <div className="variation">
+                      <div className="multi-option-select-wrap checkout-service-wrap pb-3">
+                        <div>
+                          <input
+                            type="radio"
+                            name="payment-option"
+                            id="paymentOption"
+                          />
+                          <label htmlFor="paymentOption" className="card">
+                            <div className="d-flex align-items-center gap-2">
+                              <div className="check-icon">
+                                <TbCheck />
+                              </div>
+                              <img src={nonVag} alt="Non vag" />
+                              <p className="m-0">Add Chicken Tikka Peaces</p>
+                            </div>
+                            <span className="m-0 small text-nowrap">
+                              + $10.00
+                            </span>
+                          </label>
+                        </div>
+                        <div>
+                          <input
+                            type="radio"
+                            name="payment-option"
+                            id="paymentOption2"
+                          />
+                          <label htmlFor="paymentOption2" className="card">
+                            <div className="d-flex align-items-center gap-2">
+                              <div className="check-icon">
+                                <TbCheck />
+                              </div>
+                              <p className="m-0">Add Meet Tikka Peaces </p>
+                            </div>
+                            <span className="m-0 small text-nowrap">
+                              + $10.00
+                            </span>
+                          </label>
+                        </div>
+                        <div>
+                          <input
+                            type="radio"
+                            name="payment-option"
+                            id="paymentOption2"
+                          />
+                          <label htmlFor="paymentOption2" className="card">
+                            <div className="d-flex align-items-center gap-2">
+                              <div className="check-icon">
+                                <TbCheck />
+                              </div>
+                              <p className="m-0">Add Extra Cheese (50gm)</p>
+                            </div>
+                            <span className="m-0 small text-nowrap">
+                              + $10.00
+                            </span>
+                          </label>
+                        </div>
+                        <div>
+                          <input
+                            type="radio"
+                            name="payment-option"
+                            id="paymentOption2"
+                          />
+                          <label htmlFor="paymentOption2" className="card">
+                            <div className="d-flex align-items-center gap-2">
+                              <div className="check-icon">
+                                <TbCheck />
+                              </div>
+                              <img src={nonVag} alt="Non vag" />
+                              <p className="m-0">
+                                Add some more long variaent title & text
+                              </p>
+                            </div>
+                            <span className="m-0 small text-nowrap">
+                              + $10.00
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div className="prod-meta">
                   <div className="price-wrap">
                     $30.00
