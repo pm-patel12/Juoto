@@ -704,31 +704,57 @@ hr {
   color: var(--red-600) !important;
 }
 
-.custom-cursor {
+// =======================
+// Custom Cursor Animations
+// =======================
+.cursor-dot,
+.cursor-ring,
+.cursor-icon {
   position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
 .cursor-dot {
   width: 12px;
   height: 12px;
+  background: var(--text-500);
   border-radius: 50%;
-  background: rgba(197, 0, 0, 0.6);
-  display: block;
+  transition: all linear 0s !important;
+}
+
+.cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--text-400);
+  border-radius: 50%;
+  transition: all linear 0.2s;
 }
 
 .cursor-icon {
-  font-size: 20px;
-  color: white;
-}
-
-.cursor-img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
+  height: 50px;
+  width: 50px;
+  background-color: var(--color-primary-300);
   border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 1;
+  transition: all linear 0s !important;
+  svg {
+    height: 30px;
+    width: 30px;
+    stroke: #fff;
+  }
+
+  &.dragging {
+    background-color: var(--color-primary-100);
+    scale: 0.8;
+  }
 }

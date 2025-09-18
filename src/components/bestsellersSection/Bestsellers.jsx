@@ -32,6 +32,28 @@ const Bestsellers = () => {
               }}
               className="discount-coupon-slider"
               spaceBetween={20}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                420: {
+                  slidesPerView: 2,
+                  spaceBetween: 15,
+                },
+                576: {
+                  slidesPerView: 3,
+                  spaceBetween: 15,
+                },
+                678: {
+                  slidesPerView: cardStyle === "list" ? 2 : 4,
+                  spaceBetween: 20,
+                },
+                991: {
+                  slidesPerView: cardStyle === "list" ? 2 : 5,
+                  spaceBetween: 20,
+                },
+              }}
             >
               {BestsellersProducts.map((product, index) => (
                 <SwiperSlide key={index}>

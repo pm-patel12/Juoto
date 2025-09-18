@@ -340,6 +340,12 @@
   &.fade-out {
     opacity: 0;
   }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+  }
 }
 
 // =========================
@@ -350,10 +356,18 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    overflow-x: scroll;
+    overflow-y: hidden;
     list-style: none;
     margin: 0;
     padding: 0;
+    padding-bottom: 6px;
     gap: 10px;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+    }
 
     li {
       margin: 0;
@@ -367,6 +381,7 @@
         font-size: 14px;
         line-height: 18px;
         cursor: pointer;
+        white-space: pre;
 
         &:hover {
           background: var(--slate-200);
@@ -461,9 +476,24 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 30px 20px;
     margin-bottom: 30px;
-
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 678px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 420px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     &.list {
       grid-template-columns: repeat(2, 1fr);
+
+      @media (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
   }
 }

@@ -44,7 +44,7 @@ const HeroSection = () => {
       <HeroSlider />
       <div className="container">
         <div className="hero-content">
-          <div className="d-flex align-items-start justify-content-between gap-3 flex-md-nowrap flex-wrap mb-4">
+          <div className="d-flex align-items-start justify-content-between gap-4 flex-md-row flex-column mb-4">
             {/* Store informations */}
             <div>
               <h1 className="mb-1">{brandInfo.name}</h1>
@@ -71,7 +71,7 @@ const HeroSection = () => {
             {/* Discount Coupon Card */}
             <div>
               {discountCouponData.length > 0 && (
-                <div className="discount-coupon-wrap mb-2" data-cursor="slider">
+                <div className="discount-coupon-wrap mb-2">
                   <Swiper
                     modules={[Pagination]}
                     slidesPerView={1}
@@ -80,7 +80,7 @@ const HeroSection = () => {
                     className="discount-coupon-slider"
                   >
                     {discountCouponData.map((coupon, index) => (
-                      <SwiperSlide key={index}>
+                      <SwiperSlide key={index} data-cursor="slider">
                         <DiscountCouponCard data={coupon} />
                       </SwiperSlide>
                     ))}
