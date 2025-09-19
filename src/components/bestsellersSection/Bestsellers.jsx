@@ -33,8 +33,8 @@ const Bestsellers = () => {
               className="discount-coupon-slider"
               spaceBetween={20}
               breakpoints={{
-                320: {
-                  slidesPerView: 1,
+                300: {
+                  slidesPerView: 2,
                   spaceBetween: 10,
                 },
                 420: {

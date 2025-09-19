@@ -63,7 +63,7 @@ const CheckOut = () => {
                 {/* Cart Products */}
                 <div className="mb-4">
                   <div className="cart-product-card">
-                    <div className="d-flex align-items-start gap-2 flex-wrap flex-sm-nowrap">
+                    <div className="d-flex align-items-start gap-2 mb-3">
                       <div className="prod-img">
                         <img
                           src="https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg"
@@ -97,36 +97,7 @@ const CheckOut = () => {
                     </div>
                   </div>
                   <div className="cart-product-card">
-                    <div className="d-flex align-items-start gap-2 flex-wrap flex-sm-nowrap">
-                      <div className="prod-img">
-                        <img
-                          src="https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div>
-                        <p className="mb-1">Capsicum Pizza [8 inches]</p>
-                        <div className="d-flex flex-wrap column-gap-3 row-gap-2">
-                          <div className="d-flex gap-2 align-items-center">
-                            <span className="small m-0 fw-semibold">18$</span>
-                            <s className="small m-0 light-text">18$</s>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="d-flex gap-2 align-items-center justify-content-between">
-                      <div className="prod-counter">
-                        <button>-</button>
-                        <input type="text" value="1" />
-                        <button>+</button>
-                      </div>
-                      <button className="delete-btn">
-                        <TbTrash />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="cart-product-card">
-                    <div className="d-flex align-items-start gap-2 flex-wrap flex-sm-nowrap">
+                    <div className="d-flex align-items-start gap-2 mb-3">
                       <div className="prod-img">
                         <img
                           src="https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg"
@@ -142,6 +113,8 @@ const CheckOut = () => {
                           </div>
                           <ul className="d-flex gap-2 flex-wrap align-items-center">
                             <li>Regular</li>
+                            <li>Extra cheese</li>
+                            <li>Extra cheese</li>
                           </ul>
                         </div>
                       </div>
@@ -158,7 +131,36 @@ const CheckOut = () => {
                     </div>
                   </div>
                   <div className="cart-product-card">
-                    <div className="d-flex align-items-start gap-2 flex-wrap flex-sm-nowrap">
+                    <div className="d-flex align-items-start gap-2 mb-3">
+                      <div className="prod-img">
+                        <img
+                          src="https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <p className="mb-1">Capsicum Pizza [8 inches]</p>
+                        <div className="d-flex flex-wrap column-gap-3 row-gap-2">
+                          <div className="d-flex gap-2 align-items-center">
+                            <span className="small m-0 fw-semibold">18$</span>
+                            <s className="small m-0 light-text">18$</s>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="d-flex gap-2 align-items-center justify-content-between">
+                      <div className="prod-counter">
+                        <button>-</button>
+                        <input type="text" value="1" />
+                        <button>+</button>
+                      </div>
+                      <button className="delete-btn">
+                        <TbTrash />
+                      </button>
+                    </div>
+                  </div>
+                  <div className="cart-product-card">
+                    <div className="d-flex align-items-start gap-2 mb-3">
                       <div className="prod-img">
                         <img
                           src="https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg"
@@ -192,7 +194,7 @@ const CheckOut = () => {
                   </div>
                 </div>
                 {/* Coupon & Discount Code */}
-                <div className="d-flex gap-2 mb-4">
+                <div className="d-flex gap-2 mb-4 flex-wrap flex-sm-nowrap">
                   <input
                     type="text"
                     className="form-control"

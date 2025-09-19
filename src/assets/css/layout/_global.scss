@@ -95,6 +95,13 @@
       padding-right: 0;
     }
   }
+
+  @media (max-width: 576px) {
+    span {
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+  }
 }
 
 // Hr (line Divider)
@@ -230,6 +237,19 @@ hr {
       font-size: 11px;
       user-select: none;
       cursor: not-allowed;
+    }
+  }
+  @media (max-width: 576px) {
+    .prod-content {
+      .prod-name {
+        font-size: 12px;
+      }
+      .prod-price {
+        span,
+        s {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

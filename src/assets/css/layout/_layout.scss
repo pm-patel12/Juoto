@@ -16,6 +16,20 @@ header {
     }
   }
 
+  .brand-logo {
+    height: 50px;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .brand-logo {
+      height: 35px;
+    }
+  }
+
   // Header Layout 1
   .header-layout-1 {
     .nav-menu {
@@ -146,6 +160,14 @@ header {
         stroke: var(--color-primary-500);
       }
     }
+
+    @media (max-width: 576px) {
+      .page-title {
+        span {
+          display: none;
+        }
+      }
+    }
   }
 }
 
@@ -258,7 +280,8 @@ footer {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 20px;
+          flex-wrap: wrap;
+          gap: 10px 20px;
           margin: 0;
           padding: 0;
 
