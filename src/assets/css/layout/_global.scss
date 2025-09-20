@@ -37,6 +37,10 @@
 
 .section-space {
   margin-bottom: 50px !important;
+
+  @media (max-width: 576px) {
+    margin-bottom: 30px !important;
+  }
 }
 
 // ===========================
@@ -97,6 +101,7 @@
   }
 
   @media (max-width: 576px) {
+    margin-bottom: 20px;
     span {
       font-size: 12px;
       letter-spacing: 1px;
@@ -701,6 +706,26 @@ hr {
       position: relative;
       pointer-events: auto;
       transform: scale(1);
+    }
+  }
+
+  @media (max-width: 576px) {
+    height: 30px;
+    padding: 6px 10px;
+    min-width: 80px;
+    &.show-counter {
+      width: 80px;
+      min-width: unset;
+    }
+
+    .btn-label {
+      font-size: 13px;
+    }
+
+    .counter-ui {
+      input {
+        width: 20px;
+      }
     }
   }
 }

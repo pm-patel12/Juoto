@@ -69,7 +69,7 @@ const HeroSection = () => {
               </ul>
             </div>
             {/* Discount Coupon Card */}
-            <div className="">
+            <div className="coupon-share-wrap">
               {discountCouponData.length > 0 && (
                 <div className="discount-coupon-wrap mb-2">
                   <Swiper
@@ -87,12 +87,10 @@ const HeroSection = () => {
                   </Swiper>
                 </div>
               )}
-              <div className="w-100 d-flex justify-content-center justify-sm-content-end pe-md-3">
-                <button className="ctm-btn white-btn" onClick={handleShare}>
-                  <TbShare3 />
-                  Share
-                </button>
-              </div>
+              <button className="ctm-btn white-btn" onClick={handleShare}>
+                <TbShare3 />
+                Share
+              </button>
             </div>
           </div>
           {/* CTA Section */}

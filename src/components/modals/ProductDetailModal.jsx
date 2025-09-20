@@ -6,14 +6,14 @@ const ProductDetailModal = () => {
 
   return (
     <div
-      className="modal fade"
+      className="modal fade product-details-modal"
       id="productDetailModal"
       data-bs-keyboard="true"
       tabIndex="-1"
     >
       <div className="modal-dialog modal-dialog-centered modal-lg">
         <div className="modal-content bg-transparent border-0">
-          <div className="product-details-modal">
+          <div className="product-details-body">
             <button
               className="close-btn"
               data-bs-dismiss="modal"
