@@ -32,13 +32,6 @@ const CategoryGroup = ({ title }) => {
             <TbLoader />
             Click to view more items...
           </button>
-          {/* <div className="go-to-cart-wrap">
-                        <div>
-                            <span>12 items</span>
-                            <small>Added in cart</small>
-                        </div>
-                        <button className='ctm-btn white-btn'><TbShoppingBag />GO TO CART</button>
-                    </div> */}
         </div>
       </section>
     </div>

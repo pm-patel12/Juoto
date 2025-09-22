@@ -6,6 +6,8 @@ import CategoriesList from "../components/categoriesListSection/CategoriesList";
 import CategoryGroup from "../components/categoryGroupSection/CategoryGroup";
 import { useIsMobile } from "../hook/useIsMobile";
 import { useAppContext } from "../ThemeProvider";
+import { TbShoppingBag } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   // Store configuration
@@ -60,6 +62,17 @@ const Home = () => {
           .map((section) => (
             <SectionRenderer key={section.id} section={section} />
           ))}
+
+      <div className="go-to-cart-wrap">
+        <div>
+          <span>12 items</span>
+          <small>Added in cart</small>
+        </div>
+        <Link to="/checkout" className="ctm-btn white-btn">
+          <TbShoppingBag />
+          GO TO CART
+        </Link>
+      </div>
     </>
   );
 };

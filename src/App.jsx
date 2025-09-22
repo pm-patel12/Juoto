@@ -24,7 +24,7 @@ const App = () => {
     <>
       {/* Store Front Routes Starts */}
       <AppProvider>
-        <CursorEffect />
+        {/* <CursorEffect /> */}
         <ThemeVariables />
         <Router>
           <Routes>
