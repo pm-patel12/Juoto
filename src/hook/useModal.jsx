@@ -1,35 +1,42 @@
-import { useRef, useCallback } from 'react';
+import { useRef, useCallback } from "react";
 
 export function useModal() {
-    const modalInstances = useRef(new Map());
+  const modalInstances = useRef(new Map());
 
-    const getModalInstance = useCallback((modalId) => {
-        let instance = modalInstances.current.get(modalId);
-        if (!instance) {
-            const el = document.getElementById(modalId);
-            if (el) {
-                const backdrop = el.getAttribute('data-bs-backdrop') || 'true';
-                const keyboard = el.getAttribute('data-bs-keyboard') !== 'false';
-                // eslint-disable-next-line no-undef
-                instance = new bootstrap.Modal(el, {
-                    backdrop: backdrop === 'static' ? 'static' : backdrop,
-                    keyboard,
-                });
-                modalInstances.current.set(modalId, instance);
-            }
-        }
-        return instance;
-    }, []);
+  const getModalInstance = useCallback((modalId) => {
+    const el = document.getElementById(modalId);
+    if (!el) return null;
 
-    const openModal = useCallback((modalId) => {
-        const instance = getModalInstance(modalId);
-        if (instance) instance.show();
-    }, [getModalInstance]);
+    // Always use Bootstrap's built-in safe method
+    // This ensures instance is created if missing, or reused if exists
+    // eslint-disable-next-line no-undef
+    const instance = bootstrap.Modal.getOrCreateInstance(el, {
+      backdrop:
+        el.getAttribute("data-bs-backdrop") === "static"
+          ? "static"
+          : el.getAttribute("data-bs-backdrop") || true,
+      keyboard: el.getAttribute("data-bs-keyboard") !== "false",
+    });
 
-    const closeModal = useCallback((modalId) => {
-        const instance = getModalInstance(modalId);
-        if (instance) instance.hide();
-    }, [getModalInstance]);
+    modalInstances.current.set(modalId, instance);
+    return instance;
+  }, []);
 
-    return { openModal, closeModal };
+  const openModal = useCallback(
+    (modalId) => {
+      const instance = getModalInstance(modalId);
+      if (instance) instance.show();
+    },
+    [getModalInstance]
+  );
+
+  const closeModal = useCallback(
+    (modalId) => {
+      const instance = getModalInstance(modalId);
+      if (instance) instance.hide();
+    },
+    [getModalInstance]
+  );
+
+  return { openModal, closeModal };
 }

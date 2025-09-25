@@ -425,7 +425,7 @@ hr {
 // =================================
 .ctm-editor {
   font-family: var(--body-font-family);
-  color: #222;
+  color: var(--text-900);
   line-height: 1.6;
 
   .trumbowyg-box {
@@ -443,7 +443,7 @@ hr {
     font-weight: 600;
     line-height: 1.2;
     margin: 0 0 1rem;
-    color: #111;
+    color: var(--text-900);
   }
 
   h1 {
@@ -473,23 +473,29 @@ hr {
   p {
     margin-bottom: 1rem;
     font-size: 1rem;
-    color: #444;
+    color: var(--text-900);
   }
 
+  ul,
   ol {
-    margin: 1rem 0;
-    padding-left: 2rem;
-    list-style: decimal;
+    margin: 1rem 0 !important;
+    padding-left: 2rem !important;
+    list-style: decimal !important;
+    display: flex !important;
+    flex-flow: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    gap: 0 !important;
   }
 
   ul {
-    margin: 1rem 0;
-    padding-left: 2rem;
-    list-style: disc;
+    list-style: disc !important;
   }
 
   li {
     margin-bottom: 0.5rem;
+    text-align: left;
+    color: var(--text-900);
   }
 
   a {

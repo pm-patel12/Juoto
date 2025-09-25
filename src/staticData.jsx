@@ -865,3 +865,25 @@ export var paymentOptions = [
     instructions: "10% OFF on via UPI Payment",
   },
 ];
+export var customPageData = {
+  1: {
+    title: "About The Spice Garden",
+    content: `<p>Welcome to The Spice Garden, where every dish is a journeythrough flavor and tradition. 🍴✨</p><p>We believe that food is an experience — and our pizzas arecrafted to delight your senses. From our hand-kneaded doughto our signature spice blends, every recipe is designed tobring you warmth, freshness, and unforgettable taste.</p><p>At The Spice Garden, we mix classic Italian flavors with atouch of local spices to create pizzas that feel bothauthentic and unique. Whether it’s a cheesy Margherita, asizzling Tandoori Paneer, or a bold Pepperoni, our menu ismade to satisfy every craving.</p><ul><li>🌟 Why Choose The Spice Garden?</li><li>Fresh, farm-to-table ingredients 🌱</li><li>Authentic sauces made in-house 🍅</li><li>Customizable pizzas with your favorite toppings 🧀🍄</li><li>Quick delivery & cozy dine-in experience 🚚🏡</li></ul><p>Because here at The Spice Garden, it’s not just pizza — it’sa story of love, flavor, and togetherness. ❤️🍕</p>`,
+  },
+  2: {
+    title: "Gallery",
+    content: ``,
+  },
+  3: {
+    title: "Frequently Asked Questions",
+    content: ``,
+  },
+  4: {
+    title: "Contact Information",
+    content: ``,
+  },
+  5: {
+    title: "Privacy Policy",
+    content: `<p>At The Spice Garden, your privacy is very important to us. This Privacy Policy explains how we collect, use, and protect your  when you visit our website or place an order with us.</p><p><b>1. Information We Collect</b></p><p>When you use our services, we may collect the following information:</p><ul><li>Name, phone number, email address, and delivery address</li><li>Order details and preferences</li><li>Feedback, reviews, or queries submitted by you</li><li>Basic technical information (IP address, browser type, device details)</li></ul><p><b>2. How We Use Your Information</b></p><p>We use your information to:</p><ul><li>Process and deliver your orders</li><li>Send order confirmations and updates via WhatsApp, SMS, or email</li><li>Improve our menu, services, and customer experience</li><li>Respond to your questions and support requests</li><li>Share offers, promotions, and updates (only if you opt-in)</li></ul><p><b>3. Information Sharing</b></p><p>We do not sell, rent, or trade your personal information. Your data may only be shared with:</p><ul><li>Delivery partners to complete your order</li><li>Service providers (e.g., WhatsApp integration, hosting) for smooth operations</li><li>Authorities, if required by law</li></ul><p><b>4. Data Security</b></p><p>We take appropriate technical and organizational measures to protect your information against unauthorized access, loss, misuse, or .</p><p><b>5. Your Rights</b></p><p>You have the right to:</p><ul><li>Access the personal information we hold about you</li><li>Request corrections or updates to your data</li><li>Opt out of promotional communications at any time</li></ul>`,
+  },
+};

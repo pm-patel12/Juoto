@@ -22,8 +22,6 @@ const StoreLayout = () => {
   return (
     <main>
       <Outlet />
-      {/* Page modals */}
-      <PageModal />
       {/* Product Details Modal */}
       <ProductDetailModal />
     </main>
