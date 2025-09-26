@@ -63,31 +63,26 @@ const apiConfig = {
     {
       id: 1,
       name: "About",
-      template: "default",
       pageId: 2,
     },
     {
       id: 2,
       name: "Gallery",
-      template: "gallery",
       pageId: 3,
     },
     {
       id: 3,
       name: "FAQ's",
-      template: "faq",
       pageId: 4,
     },
     {
       id: 4,
       name: "Need Help",
-      template: "contact",
       pageId: 5,
     },
     {
       id: 5,
       name: "Privacy Policy",
-      template: "default",
       pageId: 7,
     },
   ],

@@ -2,12 +2,22 @@ import { useState } from "react";
 import { useModal } from "../hook/useModal";
 import { useAppContext } from "../ThemeProvider";
 import PageModal from "./modals/PageModal";
-import { TbX } from "react-icons/tb";
-import { customPageData, faqsData } from "../staticData";
+import {
+  TbClock,
+  TbInfoCircle,
+  TbMapPin,
+  TbPhoneCall,
+  TbX,
+} from "react-icons/tb";
+import { customPageData } from "../staticData";
+import LightGallery from "lightgallery/react";
+import "lightgallery/scss/lightgallery.scss";
+import "lightgallery/scss/lg-zoom.scss";
 
 const MenuLinks = () => {
-  // Store configuration (static for now, API later)
+  // Store configuration
   const { storeConfig } = useAppContext();
+  const brandInfo = storeConfig.brandInfo;
   const navMenus = storeConfig.navMenus;
   const [activeMenus, setActiveMenus] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -27,6 +37,10 @@ const MenuLinks = () => {
       setActiveMenus(null);
       setShowModal(false);
     }, 300);
+  };
+
+  const onInit = () => {
+    console.log("lightGallery has been initialized");
   };
 
   if (navMenus.length <= 0) {
@@ -63,38 +77,74 @@ const MenuLinks = () => {
                 </button>
               </div>
               <div className="modal-body px-0">
+                {/* Defult text content Template */}
                 {activeMenus.template == "default" && (
                   <div
                     className="ctm-editor"
                     dangerouslySetInnerHTML={{ __html: activeMenus.content }}
                   />
                 )}
+                {/* FAQs Type Template */}
                 {activeMenus.template == "faq" && (
-                  <div className="accordion" id="faqSec">
-                    {faqsData.map((faq, index) => (
-                      <div className="accordion-item" key={index}>
-                        <h2 className="accordion-header">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target={`#faq${index}`}
-                            aria-expanded="false"
-                            aria-controls={`faq${index}`}
+                  <div className="faq-sec p-0 bg-transparent">
+                    <div className="accordion">
+                      {activeMenus.content.map((faq, index) => (
+                        <div className="accordion-item" key={index}>
+                          <h2 className="accordion-header">
+                            <button
+                              className="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target={`#faq${index}`}
+                              aria-expanded="false"
+                              aria-controls={`faq${index}`}
+                            >
+                              {faq.question}
+                            </button>
+                          </h2>
+                          <div
+                            id={`faq${index}`}
+                            className="accordion-collapse collapse"
+                            data-bs-parent="#faqSec"
                           >
-                            {faq.question}
-                          </button>
-                        </h2>
-                        <div
-                          id={`faq${index}`}
-                          className="accordion-collapse collapse"
-                          data-bs-parent="#faqSec"
-                        >
-                          <p>{faq.answer}</p>
+                            <p>{faq.answer}</p>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
+                )}
+                {/* Gallery Type Template */}
+                {activeMenus.template == "gallery" && (
+                  <LightGallery
+                    onInit={onInit}
+                    speed={500}
+                    plugins={[]}
+                    elementClassNames="gallery-wrap"
+                  >
+                    {activeMenus.content.map((item, index) => {
+                      return (
+                        <a href={item.src} className="img-wrap" key={index}>
+                          <img alt="img1" src={item.thumbnail} />
+                        </a>
+                      );
+                    })}
+                  </LightGallery>
+                )}
+                {/* Contact us Template */}
+                {activeMenus.template == "contact" && (
+                  <ul className="store-meta">
+                    <li>
+                      <TbPhoneCall /> {brandInfo.number}
+                    </li>
+                    <li>
+                      <TbClock />
+                      Open | 11:00 AM – 11:00 PM
+                    </li>
+                    <li>
+                      <TbMapPin /> {brandInfo.address}
+                    </li>
+                  </ul>
                 )}
               </div>
             </div>
