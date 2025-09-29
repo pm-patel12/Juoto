@@ -25,9 +25,9 @@ const Header2 = () => {
               View Food Menu
             </button>
             {/* Nav Menu */}
-            <nav className="nav-menu d-none">
+            <div className="nav-menu d-none">
               <MenuLinks />
-            </nav>
+            </div>
             {/* Brand Logo */}
             <Link to="/" className="brand-logo">
               <img

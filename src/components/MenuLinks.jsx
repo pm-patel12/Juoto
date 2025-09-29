@@ -13,6 +13,7 @@ import { customPageData } from "../staticData";
 import LightGallery from "lightgallery/react";
 import "lightgallery/scss/lightgallery.scss";
 import "lightgallery/scss/lg-zoom.scss";
+import SocialLinks from "./SocialLinks";
 
 const MenuLinks = () => {
   // Store configuration
@@ -120,7 +121,7 @@ const MenuLinks = () => {
                     onInit={onInit}
                     speed={500}
                     plugins={[]}
-                    elementClassNames="gallery-wrap"
+                    elementClassNames="gallery-modal-wrap"
                   >
                     {activeMenus.content.map((item, index) => {
                       return (
@@ -133,18 +134,30 @@ const MenuLinks = () => {
                 )}
                 {/* Contact us Template */}
                 {activeMenus.template == "contact" && (
-                  <ul className="store-meta">
-                    <li>
-                      <TbPhoneCall /> {brandInfo.number}
-                    </li>
-                    <li>
-                      <TbClock />
-                      Open | 11:00 AM – 11:00 PM
-                    </li>
-                    <li>
-                      <TbMapPin /> {brandInfo.address}
-                    </li>
-                  </ul>
+                  <div className="contact-modal-wrap">
+                    <div className="store-meta">
+                      <a className="meta-item">
+                        <TbPhoneCall /> {brandInfo.number}
+                      </a>
+                      <a className="meta-item">
+                        <TbClock />
+                        Open | 11:00 AM – 11:00 PM
+                      </a>
+                      <a className="meta-item">
+                        <TbMapPin /> {brandInfo.address}
+                      </a>
+                    </div>
+                    <div className="store-map">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235014.15049961975!2d72.5797426!3d23.0202434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1759131828876!5m2!1sen!2sin"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                      ></iframe>
+                    </div>
+                    <div className="social-actions">
+                      <SocialLinks />
+                    </div>
+                  </div>
                 )}
               </div>
             </div>

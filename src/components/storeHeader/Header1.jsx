@@ -29,9 +29,9 @@ const Header1 = () => {
               />
             </Link>
             {/* Nav Menu */}
-            <nav className="nav-menu">
+            <div className="nav-menu">
               <MenuLinks />
-            </nav>
+            </div>
             {/* Action buttons */}
             <div className="action-btn-wrap">
               <Link to={mapLink} target="_blank" className="ctm-btn white-btn">
