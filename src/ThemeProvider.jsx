@@ -43,8 +43,8 @@ const apiConfig = {
   theme: {
     primaryColor: "#c50000ff",
     headerType: "header1",
-    footerType: "footer1",
-    heroSliderType: "boxed",
+    footerType: "footer2",
+    heroSliderType: "full",
     prodCardType: {
       cardStyle: "grid",
       imgRatio: "2x2",

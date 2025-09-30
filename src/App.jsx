@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/storeFront/Home";
 import StoreLayout from "./layout/StoreLayout";
 import ThemeVariables from "./utils/ThemeVariables";
 import { AppProvider } from "./ThemeProvider";
-import CheckOut from "./pages/CheckOut";
+import CheckOut from "./pages/storeFront/CheckOut";
 import CursorEffect from "./utils/CursorEffects";
 
 const App = () => {

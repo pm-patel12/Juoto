@@ -1,9 +1,9 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { headers, footers } from "../components/registry";
+import { headers, footers } from "../components/storeFront/registry";
 import { useIsMobile } from "../hook/useIsMobile";
-import PageModal from "../components/modals/PageModal";
-import ProductDetailModal from "../components/modals/ProductDetailModal";
+import PageModal from "../components/storeFront/modals/PageModal";
+import ProductDetailModal from "../components/storeFront/modals/ProductDetailModal";
 import { useAppContext } from "../ThemeProvider";
 
 const StoreLayout = () => {
