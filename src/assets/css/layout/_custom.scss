@@ -1401,3 +1401,64 @@
     }
   }
 }
+
+// ==============================
+// Login Page
+// ==============================
+.login-page {
+  .inner {
+    display: flex;
+    padding: 26px;
+    .content-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .otp-form,
+      .login-form {
+        max-width: 470px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+    .banner-wrap {
+      flex: 0.8;
+      border-radius: 10px;
+      overflow: hidden;
+      max-height: calc(100vh - (26px * 2));
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+  }
+}
+
+// ==============================
+// Code input (For OTP Input)
+// ==============================
+.code-inputs {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+  align-items: center;
+
+  .dash {
+    background: var(--slate-300);
+    width: 16px;
+    min-width: 16px;
+    height: 3px;
+    border-radius: 3px;
+  }
+
+  .code-box {
+    transition: 0.2s ease;
+    font-size: 18px;
+    text-align: center;
+    padding: 0;
+    height: 46px;
+  }
+}

@@ -41,7 +41,7 @@ const apiConfig = {
     ],
   },
   theme: {
-    primaryColor: "#c50000ff",
+    primaryColor: "#0b00a8ff",
     headerType: "header1",
     footerType: "footer2",
     heroSliderType: "full",

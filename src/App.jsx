@@ -6,6 +6,7 @@ import ThemeVariables from "./utils/ThemeVariables";
 import { AppProvider } from "./ThemeProvider";
 import CheckOut from "./pages/storeFront/CheckOut";
 import CursorEffect from "./utils/CursorEffects";
+import Login from "./pages/admin/Login";
 
 const App = () => {
   // Bootstrap tooltips
@@ -28,6 +29,7 @@ const App = () => {
         <ThemeVariables />
         <Router>
           <Routes>
+            <Route path="/login" element={<Login />} />
             <Route path="" element={<StoreLayout />}>
               <Route path="/" element={<Home />} />
               <Route path="/checkout" element={<CheckOut />} />

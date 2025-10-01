@@ -121,7 +121,7 @@ h6 {
 p {
   font-size: var(--p-size);
   line-height: var(--p-lh);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .li,
@@ -143,6 +143,7 @@ a {
   font-size: var(--p-size);
   line-height: var(--p-lh);
   font-weight: 500;
+  text-decoration: none;
 }
 
 .small,
