@@ -109,14 +109,14 @@
   --small-size: 14px;
 
   /* Line height */
-  --h1-lh: clamp(1.2, calc(1.13 + 0.06vw), 1.4);
-  --h2-lh: clamp(1.25, calc(1.22 + 0.02vw), 1.35);
-  --h3-lh: clamp(1.3, calc(1.27 + 0.02vw), 1.4);
-  --h4-lh: clamp(1.3, calc(1.27 + 0.02vw), 1.4);
-  --h5-lh: clamp(1.3, calc(1.27 + 0.02vw), 1.4);
-  --h6-lh: 1.3;
+  --h1-lh: clamp(1.3, calc(1.13 + 0.06vw), 1.5);
+  --h2-lh: clamp(1.3, calc(1.22 + 0.02vw), 1.5);
+  --h3-lh: clamp(1.3, calc(1.27 + 0.02vw), 1.5);
+  --h4-lh: clamp(1.3, calc(1.27 + 0.02vw), 1.5);
+  --h5-lh: clamp(1.3, calc(1.27 + 0.02vw), 1.5);
+  --h6-lh: 1.4;
   --p-lh: clamp(1.5, calc(1.48 + 0.02vw), 1.6);
-  --small-lh: 1.4;
+  --small-lh: 1.7;
 }
 
 // ================================

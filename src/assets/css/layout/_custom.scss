@@ -1408,7 +1408,10 @@
 .login-page {
   .inner {
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 26px;
+    min-height: 100vh;
     .content-wrap {
       flex: 1;
       display: flex;
