@@ -1031,3 +1031,26 @@ export var customPageData = {
     content: `<p>At The Spice Garden, your privacy is very important to us. This Privacy Policy explains how we collect, use, and protect your  when you visit our website or place an order with us.</p><p><b>1. Information We Collect</b></p><p>When you use our services, we may collect the following information:</p><ul><li>Name, phone number, email address, and delivery address</li><li>Order details and preferences</li><li>Feedback, reviews, or queries submitted by you</li><li>Basic technical information (IP address, browser type, device details)</li></ul><p><b>2. How We Use Your Information</b></p><p>We use your information to:</p><ul><li>Process and deliver your orders</li><li>Send order confirmations and updates via WhatsApp, SMS, or email</li><li>Improve our menu, services, and customer experience</li><li>Respond to your questions and support requests</li><li>Share offers, promotions, and updates (only if you opt-in)</li></ul><p><b>3. Information Sharing</b></p><p>We do not sell, rent, or trade your personal information. Your data may only be shared with:</p><ul><li>Delivery partners to complete your order</li><li>Service providers (e.g., WhatsApp integration, hosting) for smooth operations</li><li>Authorities, if required by law</li></ul><p><b>4. Data Security</b></p><p>We take appropriate technical and organizational measures to protect your information against unauthorized access, loss, misuse, or .</p><p><b>5. Your Rights</b></p><p>You have the right to:</p><ul><li>Access the personal information we hold about you</li><li>Request corrections or updates to your data</li><li>Opt out of promotional communications at any time</li></ul>`,
   },
 };
+
+export var storeColorsOptions = [
+  { id: 1, color: "#E7000B" },
+  { id: 2, color: "#F54800" },
+  { id: 3, color: "#E27000" },
+  { id: 4, color: "#CF8700" },
+  { id: 5, color: "#5EA500" },
+  { id: 6, color: "#00A63D" },
+  { id: 7, color: "#009866" },
+  { id: 8, color: "#009688" },
+  { id: 9, color: "#0092B9" },
+  { id: 10, color: "#0083D0" },
+  { id: 11, color: "#165DFC" },
+  { id: 12, color: "#4F39F5" },
+  { id: 13, color: "#8023FF" },
+  { id: 14, color: "#980FFA" },
+  { id: 15, color: "#C800DF" },
+  { id: 16, color: "#E60075" },
+  { id: 17, color: "#ED0040" },
+  { id: 18, color: "#57524E" },
+  { id: 19, color: "#4A5464" },
+  { id: 20, color: "#29303B" },
+];
